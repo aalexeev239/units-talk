@@ -3,8 +3,8 @@
   .animate-letters span {
     -webkit-animation: animation-letters 5.6s infinite;
             animation: animation-letters 5.6s infinite;
-    -webkit-animation-timing-function: steps(start, end);
-            animation-timing-function: steps(start, end); }
+    -webkit-animation-timing-function: steps(0, end);
+            animation-timing-function: steps(0, end); }
     .animate-letters span:nth-child(8n) {
       color: #FFE74C; }
     .animate-letters span:nth-child(8n+1) {
@@ -14,6 +14,8 @@
     .animate-letters span:nth-child(8n+2) {
       -webkit-animation-delay: 4.9s;
               animation-delay: 4.9s;
+      -webkit-animation-duration: 4.9s;
+              animation-duration: 4.9s;
       color: #6BF178; }
     .animate-letters span:nth-child(8n+3) {
       -webkit-animation-delay: 2.1s;
@@ -26,6 +28,8 @@
     .animate-letters span:nth-child(8n+5) {
       -webkit-animation-delay: 2.8s;
               animation-delay: 2.8s;
+      -webkit-animation-duration: 4.2s;
+              animation-duration: 4.2s;
       color: #FF5964; }
     .animate-letters span:nth-child(8n+6) {
       -webkit-animation-delay: 3.5s;
@@ -34,6 +38,8 @@
     .animate-letters span:nth-child(8n+7) {
       -webkit-animation-delay: 1.4s;
               animation-delay: 1.4s;
+      -webkit-animation-duration: 4.9s;
+              animation-duration: 4.9s;
       color: #35A7FF; }
     .animate-letters span.special {
       -webkit-animation-duration: 2.1s;
@@ -58,6 +64,55 @@
     color: #6BF178; }
   100% {
     color: #35A7FF; } }
+
+strong.yellow {
+  color: #FFE74C; }
+
+strong.red {
+  color: #FF5964; }
+
+strong.green {
+  color: #6BF178; }
+
+strong.blue {
+  color: #35A7FF; }
+
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .images .img-wrap {
+    margin: 5px;
+    position: relative;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+  .images .img-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff; }
+    .images .img-icon.circle-slash path {
+      fill: #FF5964; }
+    .images .img-icon.check path {
+      fill: #6BF178; }
+
+.reveal section .images img {
+  height: 250px;
+  width: auto;
+  margin: 0;
+  display: block;
+  max-width: 100%;
+  max-height: 100%; }
+
+.text-small {
+  font-size: 36px; }
 
 /*!
  * reveal.js

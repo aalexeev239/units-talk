@@ -1,3 +1,9 @@
+$color-yellow: #FFE74C;
+$color-red: #FF5964;
+$color-green: #6BF178;
+$color-blue: #35A7FF;
+
+
 .animate-letters {
   $tick: 0.7s;
 
@@ -5,45 +11,48 @@
 
   span  {
     animation: animation-letters 8*$tick infinite;
-    animation-timing-function: steps(start, end);
+    animation-timing-function: steps(0, end);
 
     &:nth-child(8n) {
-      color: #FFE74C;
+      color: $color-yellow;
     }
 
     &:nth-child(8n+1) {
       animation-delay: $tick;
-      color: #FF5964;
+      color: $color-red;
     }
 
     &:nth-child(8n+2) {
       animation-delay: 7 * $tick;
-      color: #6BF178;
+      animation-duration: 7 * $tick;
+      color: $color-green;
     }
 
     &:nth-child(8n+3) {
       animation-delay: 3 * $tick;
-      color: #35A7FF;
+      color: $color-blue;
     }
 
     &:nth-child(8n+4) {
       animation-delay: 5 * $tick;
-      color: #FFE74C;
+      color: $color-yellow;
     }
 
     &:nth-child(8n+5) {
       animation-delay: 4*$tick;
-      color: #FF5964;
+      animation-duration: 6 * $tick;
+      color: $color-red;
     }
 
     &:nth-child(8n+6) {
       animation-delay: 5*$tick;
-      color: #6BF178;
+      color: $color-green;
     }
 
     &:nth-child(8n+7) {
       animation-delay: 2*$tick;
-      color: #35A7FF;
+      animation-duration: 7 * $tick;
+      color: $color-blue;
     }
 
     &.special {
@@ -54,18 +63,77 @@
 
 @keyframes animation-letters {
   25% {
-    color: #FFE74C;
+    color: $color-yellow;
   }
 
   50% {
-    color: #FF5964;
+    color: $color-red;
   }
 
   75% {
-    color: #6BF178;
+    color: $color-green;
   }
 
   100% {
-    color: #35A7FF;
+    color: $color-blue;
   }
+}
+
+strong {
+  &.yellow {
+    color: $color-yellow;
+  }
+
+  &.red {
+    color: $color-red;
+  }
+
+  &.green {
+    color: $color-green;
+  }
+
+  &.blue {
+    color: $color-blue;
+  }
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .img-wrap {
+    margin: 5px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .img-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+
+    &.circle-slash path {
+      fill: $color-red;
+    }
+
+    &.check path {
+      fill: $color-green;
+    }
+  }
+}
+
+.reveal section .images img {
+  height: 250px;
+  width: auto;
+  margin: 0;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.text-small {
+  font-size: 36px;
 }

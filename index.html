@@ -25,7 +25,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background="https://www.geek.com/wp-content/uploads/2015/09/maxresdefault1.jpg" class="animate-letters">
+				<section data-background="images/unit-main.jpg" class="animate-letters">
 					<span>U</span>
 					<span>N</span>
 					<span>I</span>
@@ -39,7 +39,39 @@
 					<span>N</span>
 					<span>G</span>
 				</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>What is unit</h2>
+					<p>
+						Unit test instantiates a <strong class="yellow">small portion</strong> of an application and tests its behavior <strong class="blue">independently</strong> from other parts
+					</p>
+				</section>
+				<section>
+					<h2>Good unit tests are</h2>
+					<ul class="text-small">
+						<li class="fragment"><strong class="yellow">Fast</strong>
+							<br>There will be thousands of tests in your app. Thousands.</li>
+						<li class="fragment"><strong class="blue">Isolated</strong>
+							<br>Units must be standalone, without any dependencies or side effects.</li>
+						<li class="fragment"><strong class="red">Repeatable</strong>
+							<br>Unit should be consistent with it result. The result shouldn't change unless you change something in code.</li>
+						<li class="fragment"><strong class="green">Timely</strong>
+							<br>Time for writing test should be comparable to writing code</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Must be <strong class="blue">UNIT</strong></h2>
+					<div class="images">
+						<div class="img-wrap">
+							<img width="300" src="https://cdna.artstation.com/p/assets/images/images/011/677/408/large/luca-nemolato-westworld-robot-arm-v3-a-onscan-top.jpg?1530810681" alt="">
+							<svg class="img-icon check" width="60" height="60" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+						</div>
+						<div class="img-wrap">
+							<img width="300" src="https://thumbs.gfycat.com/OptimisticBleakComet-size_restricted.gif" alt="">
+							<svg class="img-icon circle-slash" width="60" height="60" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 1.3c1.3 0 2.5.44 3.47 1.17l-8 8A5.755 5.755 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zm0 11.41c-1.3 0-2.5-.44-3.47-1.17l8-8c.73.97 1.17 2.17 1.17 3.47 0 3.14-2.56 5.7-5.7 5.7z"></path></svg>
+						</div>
+					</div>
+
+				</section>
 			</div>
 		</div>
 
@@ -50,6 +82,8 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				showNotes: document.location.search.indexOf('showNotes=true') >= 0,
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -60,3 +94,8 @@
 		</script>
 	</body>
 </html>
+
+<!--<strong class="yellow">U</strong>-->
+<!--<strong class="blue">N</strong>-->
+<!--<strong class="red">I</strong>-->
+<!--<strong class="green">T</strong>-->
