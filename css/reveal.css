@@ -1,3 +1,64 @@
+.animate-letters {
+  font-size: 2.5em; }
+  .animate-letters span {
+    -webkit-animation: animation-letters 5.6s infinite;
+            animation: animation-letters 5.6s infinite;
+    -webkit-animation-timing-function: steps(start, end);
+            animation-timing-function: steps(start, end); }
+    .animate-letters span:nth-child(8n) {
+      color: #FFE74C; }
+    .animate-letters span:nth-child(8n+1) {
+      -webkit-animation-delay: 0.7s;
+              animation-delay: 0.7s;
+      color: #FF5964; }
+    .animate-letters span:nth-child(8n+2) {
+      -webkit-animation-delay: 4.9s;
+              animation-delay: 4.9s;
+      color: #6BF178; }
+    .animate-letters span:nth-child(8n+3) {
+      -webkit-animation-delay: 2.1s;
+              animation-delay: 2.1s;
+      color: #35A7FF; }
+    .animate-letters span:nth-child(8n+4) {
+      -webkit-animation-delay: 3.5s;
+              animation-delay: 3.5s;
+      color: #FFE74C; }
+    .animate-letters span:nth-child(8n+5) {
+      -webkit-animation-delay: 2.8s;
+              animation-delay: 2.8s;
+      color: #FF5964; }
+    .animate-letters span:nth-child(8n+6) {
+      -webkit-animation-delay: 3.5s;
+              animation-delay: 3.5s;
+      color: #6BF178; }
+    .animate-letters span:nth-child(8n+7) {
+      -webkit-animation-delay: 1.4s;
+              animation-delay: 1.4s;
+      color: #35A7FF; }
+    .animate-letters span.special {
+      -webkit-animation-duration: 2.1s;
+              animation-duration: 2.1s; }
+
+@-webkit-keyframes animation-letters {
+  25% {
+    color: #FFE74C; }
+  50% {
+    color: #FF5964; }
+  75% {
+    color: #6BF178; }
+  100% {
+    color: #35A7FF; } }
+
+@keyframes animation-letters {
+  25% {
+    color: #FFE74C; }
+  50% {
+    color: #FF5964; }
+  75% {
+    color: #6BF178; }
+  100% {
+    color: #35A7FF; } }
+
 /*!
  * reveal.js
  * http://revealjs.com

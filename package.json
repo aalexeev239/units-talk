@@ -1,5 +1,5 @@
 {
-  "name": "Unit testing talk",
+  "name": "Unit-testing-talk",
   "version": "0.0.1",
   "scripts": {
     "test": "grunt test",
