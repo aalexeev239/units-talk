@@ -10,9 +10,6 @@ export class Counter {
     }
 
     increment(value: number = 1) {
-        this.state = {
-            ...this.state,
-            value: this.state.value + value
-        };
+        this.state.value = this.state.value + value;
     }
 }

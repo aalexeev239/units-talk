@@ -216,36 +216,27 @@
                 </section>
 
                 <section>
-                    <h2>Naming matters</h2>
-                    <ul>
-                        <li>shows what is being tested more clearly</li>
-                        <li>easy to read</li>
-                        <li>improves DRY</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>Example</h2>
+                    <h2>AAA – Arrange, Act, Assert</h2>
                     <div class="tabset">
                         <input
                             type="radio"
                             name="tabset"
-                            id="code-1-tab1"
-                            aria-controls="code-1-panel1"
+                            id="code-aaa-1-tab1"
+                            aria-controls="code-aaa-1-panel1"
                         />
-                        <label for="code-1-tab1">Counter.ts</label>
+                        <label for="code-aaa-1-tab1">Counter.ts</label>
 
                         <input
                             type="radio"
                             name="tabset"
-                            id="code-1-tab2"
-                            aria-controls="code-1-panel2"
+                            id="code-aaa-1-tab2"
+                            aria-controls="code-aaa-1-panel2"
                             checked
                         />
-                        <label for="code-1-tab2">Counter.spec.ts</label>
+                        <label for="code-aaa-1-tab2">Counter.spec.ts</label>
 
                         <div class="tab-panels">
-                            <div id="code-1-panel1" class="tab-panel">
+                            <div id="code-aaa-1-panel1" class="tab-panel">
                                 <pre><code class="typescript hljs" data-trim data-line-numbers>
                                     export interface ICounter {
                                         value: number;
@@ -268,12 +259,11 @@
                                 </code></pre>
                             </div>
 
-                            <div id="code-1-panel2" class="tab-panel">
+                            <div id="code-aaa-1-panel2" class="tab-panel">
                                 <pre><code class="typescript hljs" data-trim data-line-numbers>
                                     it('increments value by one', () => {
                                         //arrange
-                                        const stateMock: ICounter = {value: 0};
-                                        const counter = new Counter(stateMock);
+                                        const counter = new Counter({ value: 0 });
 
                                         //act
                                         counter.increment(1);
@@ -285,6 +275,99 @@
                             </div>
                         </div>
                     </div>
+                </section>
+
+                <section>
+                    <h2>AAA – Arrange, Act, Assert</h2>
+                    <div class="tabset">
+                        <input
+                            type="radio"
+                            name="tabset"
+                            id="code-aaa-2-tab1"
+                            aria-controls="code-aaa-2-panel1"
+                        />
+                        <label for="code-aaa-2-tab1">Counter.ts</label>
+
+                        <input
+                            type="radio"
+                            name="tabset"
+                            id="code-aaa-2-tab2"
+                            aria-controls="code-aaa-2-panel2"
+                            checked
+                        />
+                        <label for="code-aaa-2-tab2">Counter.spec.ts</label>
+
+                        <div class="tab-panels">
+                            <div id="code-aaa-2-panel1" class="tab-panel">
+                                <pre><code class="typescript hljs" data-trim data-line-numbers>
+                                    export interface ICounter {
+                                        value: number;
+                                    }
+
+                                    export class Counter {
+                                        constructor(private state: ICounter) {}
+
+                                        get value(): number {
+                                            return this.state.value;
+                                        }
+
+                                        increment(value: number = 1) {
+                                            this.state = {
+                                                ...this.state,
+                                                value: this.state.value + value
+                                            };
+                                        }
+                                    }
+                                </code></pre>
+                            </div>
+
+                            <div id="code-aaa-2-panel2" class="tab-panel">
+                                <pre><code class="typescript hljs" data-trim data-line-numbers>
+                                    describe("increment", () => {
+                                        let counter: Counter;
+
+                                        beforeEach(() => {
+                                            //arrange
+                                            counter = new Counter({ value: 0 });
+                                        });
+
+                                        it("increments value by 1 if no argument passed", () => {
+                                            //act
+                                            counter.increment();
+
+                                            //assert
+                                            expect(counter.value).toBe(1);
+                                        });
+
+                                        it("increments value by 2 if argument 2 passed", () => {
+                                            //act
+                                            counter.increment(2);
+
+                                            //assert
+                                            expect(counter.value).toBe(2);
+                                        });
+                                    });
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Naming matters</h2>
+                    <ul>
+                        <li>test suite can be used as a documentation</li>
+                        <li>failure messages describe what is broken</li>
+                        <li>enforces good naming</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Naming tips</h2>
+                    <ul>
+                        <li>show class/method being tested</li>
+                        <li>use <strong>describe</strong> to fold structure or conditions</li>
+                        <li>use <strong>it</strong> to describe behaviour</li>
+                    </ul>
                 </section>
             </div>
         </div>

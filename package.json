@@ -10,7 +10,7 @@
   },
   "jest": {
     "verbose": true,
-    "rootDir": "./playground",
+    "rootDir": "./examples",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     }
