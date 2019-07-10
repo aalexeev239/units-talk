@@ -1,153 +1,316 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
 
-		<title>Unit testing</title>
+        <title>Unit testing</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/reveal.css" />
+        <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background="images/unit-main.jpg" class="animate-letters">
-					<span>U</span>
-					<span>N</span>
-					<span>I</span>
-					<span>T</span>
-					<br>
-					<span>T</span>
-					<span>E</span>
-					<span>S</span>
-					<span>T</span>
-					<span class="special">I</span>
-					<span>N</span>
-					<span>G</span>
-				</section>
-				<section>
-					<h2>What is unit</h2>
-					<p>
-						Unit test instantiates a <strong class="yellow">small portion</strong> of an application and tests its behavior <strong class="blue">independently</strong> from other parts
-					</p>
-				</section>
-				<section>
-					<h2>It's an instrument</h2>
-					<ul>
-						<li>a <strong class="blue">part</strong> of an aplication like prod code</li>
-						<li>owned by <strong class="green">team</strong>, not certain developers</li>
-						<li><strong class="red">helps</strong> to solve problems</li>
-						<li>should be used <strong class="yellow">wisely</strong></li>
-					</ul>
-				</section>
-				<section>
-					<h2>Good unit tests are</h2>
-					<ul class="text-small">
-						<li class="fragment"><strong class="yellow">Fast</strong>
-							<br>There will be thousands of tests in your app. Thousands.</li>
-						<li class="fragment"><strong class="blue">Isolated</strong>
-							<br>Units must be standalone, without any dependencies or side effects.</li>
-						<li class="fragment"><strong class="red">Repeatable</strong>
-							<br>Unit should be consistent with it result. The result shouldn't change unless you change something in code.</li>
-						<li class="fragment"><strong class="green">Timely</strong>
-							<br>Time for writing test should be comparable to writing code</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Testing <strong class="yellow">Pyramid</strong></h2>
-					<img width="500" src="https://d2h1nbmw1jjnl.cloudfront.net/ckeditor/pictures/data/000/000/158/content/typical_pyramid-1024x938.jpg" alt="">
-				</section>
-				<section>
-					<h2>unicorns and rainbows</h2>
-					<p>You have brilliant app with low coupled modules and components. Independent layers of abstractions</p>
-					<p>Use units to test interactions from bottom to top on small pieces of code</p>
-				</section>
-				<section>
-					<h2>something good, something not</h2>
-					<p>your app is rather good but with a portion of bugs and legacy</p>
-					<p>the biggest problem is to reduce dependencies between different parts of the system</p>
-					<p>usually you you add testing while refactoring big parts</p>
-					<p>Add more higher level tests firstly, then you can extract low coupled components and cover them with units</p>
-				</section>
-				<section>
-					<h2>holy sh*t</h2>
-					<p>extraordinary hard to write units</p>
-					<p>unpredictable behaviour</p>
-					<p>Use higher-level tests, then rewrite code. TDD is a good option</p>
-				</section>
-				<section>
-					<h2>Must be <strong class="blue">UNIT</strong></h2>
-					<div class="images">
-						<div class="img-wrap">
-							<img width="300" src="https://cdna.artstation.com/p/assets/images/images/011/677/408/large/luca-nemolato-westworld-robot-arm-v3-a-onscan-top.jpg?1530810681" alt="">
-							<svg class="img-icon check" width="60" height="60" viewBox="0 0 12 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
-						</div>
-						<div class="img-wrap">
-							<img width="300" src="https://thumbs.gfycat.com/OptimisticBleakComet-size_restricted.gif" alt="">
-							<svg class="img-icon circle-slash" width="60" height="60" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 1.3c1.3 0 2.5.44 3.47 1.17l-8 8A5.755 5.755 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zm0 11.41c-1.3 0-2.5-.44-3.47-1.17l8-8c.73.97 1.17 2.17 1.17 3.47 0 3.14-2.56 5.7-5.7 5.7z"></path></svg>
-						</div>
-					</div>
-				</section>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = window.location.search.match(/print-pdf/gi)
+                ? "css/print/pdf.css"
+                : "css/print/paper.css";
+            document.getElementsByTagName("head")[0].appendChild(link);
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section
+                    data-background="images/unit-main.jpg"
+                    class="animate-letters"
+                >
+                    <span>U</span>
+                    <span>N</span>
+                    <span>I</span>
+                    <span>T</span>
+                    <br />
+                    <span>T</span>
+                    <span>E</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span class="special">I</span>
+                    <span>N</span>
+                    <span>G</span>
+                </section>
+                <section>
+                    <h2>What is unit</h2>
+                    <p>
+                        Unit test instantiates a
+                        <strong class="yellow">small portion</strong> of an
+                        application and tests its behavior
+                        <strong class="blue">independently</strong> from other
+                        parts
+                    </p>
+                </section>
+                <section>
+                    <h2>It's an instrument</h2>
+                    <ul>
+                        <li>
+                            a <strong class="blue">part</strong> of an
+                            aplication like prod code
+                        </li>
+                        <li>
+                            owned by <strong class="green">team</strong>, not
+                            certain developers
+                        </li>
+                        <li>
+                            <strong class="red">helps</strong> to solve problems
+                        </li>
+                        <li>
+                            should be used
+                            <strong class="yellow">wisely</strong>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Good unit tests are</h2>
+                    <ul class="text-small">
+                        <li class="fragment">
+                            <strong class="yellow">Fast</strong> <br />There
+                            will be thousands of tests in your app. Thousands.
+                        </li>
+                        <li class="fragment">
+                            <strong class="blue">Isolated</strong> <br />Units
+                            must be standalone, without any dependencies or side
+                            effects.
+                        </li>
+                        <li class="fragment">
+                            <strong class="red">Repeatable</strong> <br />Unit
+                            should be consistent with it result. The result
+                            shouldn't change unless you change something in
+                            code.
+                        </li>
+                        <li class="fragment">
+                            <strong class="green">Timely</strong> <br />Time for
+                            writing test should be comparable to writing code
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Testing <strong class="yellow">Pyramid</strong></h2>
+                    <img
+                        width="500"
+                        src="https://d2h1nbmw1jjnl.cloudfront.net/ckeditor/pictures/data/000/000/158/content/typical_pyramid-1024x938.jpg"
+                        alt=""
+                    />
+                </section>
+                <section>
+                    <h2>unicorns and rainbows</h2>
+                    <p>
+                        You have brilliant app with low coupled modules and
+                        components. Independent layers of abstractions
+                    </p>
+                    <p>
+                        Use units to test interactions from bottom to top on
+                        small pieces of code
+                    </p>
+                </section>
+                <section>
+                    <h2>something good, something not</h2>
+                    <p>
+                        your app is rather good but with a portion of bugs and
+                        legacy
+                    </p>
+                    <p>
+                        the biggest problem is to reduce dependencies between
+                        different parts of the system
+                    </p>
+                    <p>
+                        usually you you add testing while refactoring big parts
+                    </p>
+                    <p>
+                        Add more higher level tests firstly, then you can
+                        extract low coupled components and cover them with units
+                    </p>
+                </section>
+                <section>
+                    <h2>holy sh*t</h2>
+                    <p>extraordinary hard to write units</p>
+                    <p>unpredictable behaviour</p>
+                    <p>
+                        Use higher-level tests, then rewrite code. TDD is a good
+                        option
+                    </p>
+                </section>
+                <section>
+                    <h2>Must be <strong class="blue">UNIT</strong></h2>
+                    <div class="images">
+                        <div class="img-wrap">
+                            <img
+                                width="300"
+                                src="https://cdna.artstation.com/p/assets/images/images/011/677/408/large/luca-nemolato-westworld-robot-arm-v3-a-onscan-top.jpg?1530810681"
+                                alt=""
+                            />
+                            <svg
+                                class="img-icon check"
+                                width="60"
+                                height="60"
+                                viewBox="0 0 12 16"
+                                version="1.1"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="img-wrap">
+                            <img
+                                width="300"
+                                src="https://thumbs.gfycat.com/OptimisticBleakComet-size_restricted.gif"
+                                alt=""
+                            />
+                            <svg
+                                class="img-icon circle-slash"
+                                width="60"
+                                height="60"
+                                viewBox="0 0 14 16"
+                                version="1.1"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 1.3c1.3 0 2.5.44 3.47 1.17l-8 8A5.755 5.755 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zm0 11.41c-1.3 0-2.5-.44-3.47-1.17l8-8c.73.97 1.17 2.17 1.17 3.47 0 3.14-2.56 5.7-5.7 5.7z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                </section>
 
-				<section>
-					<h2>AAA – Arrange, Act, Assert</h2>
-					<ul>
-						<li>Arrange your objects, creating and setting them up as necessary</li>
-						<li>Act on an object</li>
-						<li>Assert that something is as expected</li>
-					</ul>
-				</section>
+                <section>
+                    <h2>AAA – Arrange, Act, Assert</h2>
+                    <ul>
+                        <li>
+                            Arrange your objects, creating and setting them up
+                            as necessary
+                        </li>
+                        <li>Act on an object</li>
+                        <li>Assert that something is as expected</li>
+                    </ul>
+                </section>
 
-				<section>
-					<h2>AAA – Arrange, Act, Assert</h2>
-					<p>Benefits</p>
-					<ul>
-						<li>shows what is being tested more clearly</li>
-						<li>easy to read</li>
-						<li>improves DRY</li>
-					</ul>
-				</section>
-				<!--
+                <section>
+                    <h2>AAA – Arrange, Act, Assert</h2>
+                    <p>Benefits</p>
+                    <ul>
+                        <li>shows what is being tested more clearly</li>
+                        <li>easy to read</li>
+                        <li>improves DRY</li>
+                    </ul>
+                </section>
 
+                <section>
+                    <h2>Naming matters</h2>
+                    <ul>
+                        <li>shows what is being tested more clearly</li>
+                        <li>easy to read</li>
+                        <li>improves DRY</li>
+                    </ul>
+                </section>
 
+                <section>
+                    <h2>Example</h2>
+                    <div class="tabset">
+                        <input
+                            type="radio"
+                            name="tabset"
+                            id="code-1-tab1"
+                            aria-controls="code-1-panel1"
+                        />
+                        <label for="code-1-tab1">Counter.ts</label>
 
+                        <input
+                            type="radio"
+                            name="tabset"
+                            id="code-1-tab2"
+                            aria-controls="code-1-panel2"
+                            checked
+                        />
+                        <label for="code-1-tab2">Counter.spec.ts</label>
 
-				-->
-			</div>
-		</div>
+                        <div class="tab-panels">
+                            <div id="code-1-panel1" class="tab-panel">
+                                <pre><code class="typescript hljs" data-trim data-line-numbers>
+                                    export interface ICounter {
+                                        value: number;
+                                    }
 
-		<script src="js/reveal.js"></script>
+                                    export class Counter {
+                                        private state: ICounter = {value: 0};
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				showNotes: document.location.search.indexOf('showNotes=true') >= 0,
-				history: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+                                        constructor(state: ICounter) {
+                                            this.state = state;
+                                        }
+
+                                        get value(): number {
+                                            return this.state.value;
+                                        }
+
+                                        increment(value: number = 1) {
+                                            this.state = {
+                                                ...this.state,
+                                                value: this.state.value + value
+                                            }
+                                        }
+                                    }
+                                </code></pre>
+                            </div>
+                            <div id="code-1-panel2" class="tab-panel">
+                                <pre><code class="typescript hljs" data-trim data-line-numbers>
+                                    it('increments value by one', () => {
+                                        //arrange
+                                        const stateMock: ICounter = {value: 0};
+                                        const counter = new Counter(stateMock);
+
+                                        //act
+                                        counter.increment(1);
+
+                                        //assert
+                                        expect(counter.value).toBe(1);
+                                    });
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                showNotes:
+                    document.location.search.indexOf("showNotes=true") >= 0,
+                history: true,
+                dependencies: [
+                    { src: "plugin/markdown/marked.js" },
+                    { src: "plugin/markdown/markdown.js" },
+                    { src: "plugin/notes/notes.js", async: true },
+                    { src: "plugin/highlight/highlight.js", async: true }
+                ]
+            });
+        </script>
+    </body>
 </html>
 
 <!--<strong class="yellow">U</strong>-->
