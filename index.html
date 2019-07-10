@@ -252,11 +252,7 @@
                                     }
 
                                     export class Counter {
-                                        private state: ICounter = {value: 0};
-
-                                        constructor(state: ICounter) {
-                                            this.state = state;
-                                        }
+                                        constructor(private state: ICounter) {}
 
                                         get value(): number {
                                             return this.state.value;
@@ -266,11 +262,12 @@
                                             this.state = {
                                                 ...this.state,
                                                 value: this.state.value + value
-                                            }
+                                            };
                                         }
                                     }
                                 </code></pre>
                             </div>
+
                             <div id="code-1-panel2" class="tab-panel">
                                 <pre><code class="typescript hljs" data-trim data-line-numbers>
                                     it('increments value by one', () => {
