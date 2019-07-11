@@ -1,4 +1,4 @@
-import { Counter, ICounter } from "./counter";
+import { Counter, ICounter } from "../counter";
 
 describe('Template', () => {
     describe("Counter", () => {
