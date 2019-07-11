@@ -135,3 +135,13 @@ strong {
 .text-small {
   font-size: 36px;
 }
+
+.text {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 36px;
+
+    &.text-left {
+        text-align: left;
+    }
+}

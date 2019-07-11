@@ -179,6 +179,13 @@ strong.blue {
 .text-small {
   font-size: 36px; }
 
+.text {
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 36px; }
+  .text.text-left {
+    text-align: left; }
+
 /*!
  * reveal.js
  * http://revealjs.com

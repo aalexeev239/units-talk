@@ -111,41 +111,51 @@
                 </section>
                 <section>
                     <h2>unicorns and rainbows</h2>
-                    <p>
-                        You have brilliant app with low coupled modules and
-                        components. Independent layers of abstractions
-                    </p>
-                    <p>
-                        Use units to test interactions from bottom to top on
-                        small pieces of code
-                    </p>
+                    <div class="text text-left">
+                        <p>
+                            You have brilliant app with low coupled modules and
+                            components. Independent layers of abstractions.
+                        </p>
+                        <p>
+                            Use units to test interactions from bottom to top on
+                            small pieces of code.
+                        </p>
+                    </div>
                 </section>
                 <section>
-                    <h2>something good, something not</h2>
-                    <p>
-                        your app is rather good but with a portion of bugs and
-                        legacy
-                    </p>
-                    <p>
-                        the biggest problem is to reduce dependencies between
-                        different parts of the system
-                    </p>
-                    <p>
-                        usually you you add testing while refactoring big parts
-                    </p>
-                    <p>
-                        Add more higher level tests firstly, then you can
-                        extract low coupled components and cover them with units
-                    </p>
+                    <h2>something&nbsp;good, something&nbsp;not</h2>
+
+                    <div class="text text-left">
+                        <p>
+                            Your app is rather good with a portion of bugs and
+                            legacy.
+                        </p>
+                        <p>
+                            The biggest problem is to reduce dependencies
+                            between different parts of the system.
+                        </p>
+                        <p>
+                            Usually you add testing while refactoring big parts.
+                        </p>
+                        <p>
+                            Add more higher level tests firstly. Then you can
+                            extract low coupled components and cover them with
+                            units.
+                        </p>
+                    </div>
                 </section>
                 <section>
                     <h2>holy sh*t</h2>
-                    <p>extraordinary hard to write units</p>
-                    <p>unpredictable behaviour</p>
-                    <p>
-                        Use higher-level tests, then rewrite code. TDD is a good
-                        option
-                    </p>
+                    <div class="text text-left">
+                        <p>
+                            It's extraordinary hard to write units. Lots of
+                            unpredictable behaviour.
+                        </p>
+                        <p>
+                            Use higher-level tests, then rewrite code. <br>TDD is a
+                            an option.
+                        </p>
+                    </div>
                 </section>
                 <section>
                     <h2>Must be <strong class="blue">UNIT</strong></h2>
@@ -153,8 +163,8 @@
                         <div class="img-wrap">
                             <img
                                 width="300"
-                                src="https://cdna.artstation.com/p/assets/images/images/011/677/408/large/luca-nemolato-westworld-robot-arm-v3-a-onscan-top.jpg?1530810681"
-                                alt=""
+                                src="images/unit-part.jpg"
+                                alt="unit-part"
                             />
                             <svg
                                 class="img-icon check"
@@ -173,8 +183,8 @@
                         <div class="img-wrap">
                             <img
                                 width="300"
-                                src="https://thumbs.gfycat.com/OptimisticBleakComet-size_restricted.gif"
-                                alt=""
+                                src="images/unit-whole.gif"
+                                alt="unit-whole"
                             />
                             <svg
                                 class="img-icon circle-slash"
@@ -192,22 +202,22 @@
                         </div>
                     </div>
                 </section>
-
                 <section>
-                    <h2>AAA – Arrange, Act, Assert</h2>
+                    <h2>Code style</h2>
+                </section>
+                <section>
+                    <h2>AAA. Arrange, Act, Assert</h2>
                     <ul>
                         <li>
                             Arrange your objects, creating and setting them up
-                            as necessary
+                            if&nbsp;necessary
                         </li>
                         <li>Act on an object</li>
                         <li>Assert that something is as expected</li>
                     </ul>
                 </section>
-
                 <section>
-                    <h2>AAA – Arrange, Act, Assert</h2>
-                    <p>Benefits</p>
+                    <h2>AAA. Benefits</h2>
                     <ul>
                         <li>shows what is being tested more clearly</li>
                         <li>easy to read</li>
@@ -215,143 +225,143 @@
                     </ul>
                 </section>
 
-                <section>
-                    <h2>AAA – Arrange, Act, Assert</h2>
-                    <div class="tabset">
-                        <input
-                            type="radio"
-                            name="tabset"
-                            id="code-aaa-1-tab1"
-                            aria-controls="code-aaa-1-panel1"
-                        />
-                        <label for="code-aaa-1-tab1">Counter.ts</label>
+                <!--<section>-->
+                <!--<h2>AAA – Arrange, Act, Assert</h2>-->
+                <!--<div class="tabset">-->
+                <!--<input-->
+                <!--type="radio"-->
+                <!--name="tabset"-->
+                <!--id="code-aaa-1-tab1"-->
+                <!--aria-controls="code-aaa-1-panel1"-->
+                <!--/>-->
+                <!--<label for="code-aaa-1-tab1">Counter.ts</label>-->
 
-                        <input
-                            type="radio"
-                            name="tabset"
-                            id="code-aaa-1-tab2"
-                            aria-controls="code-aaa-1-panel2"
-                            checked
-                        />
-                        <label for="code-aaa-1-tab2">Counter.spec.ts</label>
+                <!--<input-->
+                <!--type="radio"-->
+                <!--name="tabset"-->
+                <!--id="code-aaa-1-tab2"-->
+                <!--aria-controls="code-aaa-1-panel2"-->
+                <!--checked-->
+                <!--/>-->
+                <!--<label for="code-aaa-1-tab2">Counter.spec.ts</label>-->
 
-                        <div class="tab-panels">
-                            <div id="code-aaa-1-panel1" class="tab-panel">
-                                <pre><code class="typescript hljs" data-trim data-line-numbers>
-                                    export interface ICounter {
-                                        value: number;
-                                    }
+                <!--<div class="tab-panels">-->
+                <!--<div id="code-aaa-1-panel1" class="tab-panel">-->
+                <!--<pre><code class="typescript hljs" data-trim data-line-numbers>-->
+                <!--export interface ICounter {-->
+                <!--value: number;-->
+                <!--}-->
 
-                                    export class Counter {
-                                        constructor(private state: ICounter) {}
+                <!--export class Counter {-->
+                <!--constructor(private state: ICounter) {}-->
 
-                                        get value(): number {
-                                            return this.state.value;
-                                        }
+                <!--get value(): number {-->
+                <!--return this.state.value;-->
+                <!--}-->
 
-                                        increment(value: number = 1) {
-                                            this.state = {
-                                                ...this.state,
-                                                value: this.state.value + value
-                                            };
-                                        }
-                                    }
-                                </code></pre>
-                            </div>
+                <!--increment(value: number = 1) {-->
+                <!--this.state = {-->
+                <!--...this.state,-->
+                <!--value: this.state.value + value-->
+                <!--};-->
+                <!--}-->
+                <!--}-->
+                <!--</code></pre>-->
+                <!--</div>-->
 
-                            <div id="code-aaa-1-panel2" class="tab-panel">
-                                <pre><code class="typescript hljs" data-trim data-line-numbers>
-                                    it('increments value by one', () => {
-                                        //arrange
-                                        const counter = new Counter({ value: 0 });
+                <!--<div id="code-aaa-1-panel2" class="tab-panel">-->
+                <!--<pre><code class="typescript hljs" data-trim data-line-numbers>-->
+                <!--it('increments value by one', () => {-->
+                <!--//arrange-->
+                <!--const counter = new Counter({ value: 0 });-->
 
-                                        //act
-                                        counter.increment(1);
+                <!--//act-->
+                <!--counter.increment(1);-->
 
-                                        //assert
-                                        expect(counter.value).toBe(1);
-                                    });
-                                </code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <!--//assert-->
+                <!--expect(counter.value).toBe(1);-->
+                <!--});-->
+                <!--</code></pre>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</section>-->
 
-                <section>
-                    <h2>AAA – Arrange, Act, Assert</h2>
-                    <div class="tabset">
-                        <input
-                            type="radio"
-                            name="tabset"
-                            id="code-aaa-2-tab1"
-                            aria-controls="code-aaa-2-panel1"
-                        />
-                        <label for="code-aaa-2-tab1">Counter.ts</label>
+                <!--<section>-->
+                <!--<h2>AAA – Arrange, Act, Assert</h2>-->
+                <!--<div class="tabset">-->
+                <!--<input-->
+                <!--type="radio"-->
+                <!--name="tabset"-->
+                <!--id="code-aaa-2-tab1"-->
+                <!--aria-controls="code-aaa-2-panel1"-->
+                <!--/>-->
+                <!--<label for="code-aaa-2-tab1">Counter.ts</label>-->
 
-                        <input
-                            type="radio"
-                            name="tabset"
-                            id="code-aaa-2-tab2"
-                            aria-controls="code-aaa-2-panel2"
-                            checked
-                        />
-                        <label for="code-aaa-2-tab2">Counter.spec.ts</label>
+                <!--<input-->
+                <!--type="radio"-->
+                <!--name="tabset"-->
+                <!--id="code-aaa-2-tab2"-->
+                <!--aria-controls="code-aaa-2-panel2"-->
+                <!--checked-->
+                <!--/>-->
+                <!--<label for="code-aaa-2-tab2">Counter.spec.ts</label>-->
 
-                        <div class="tab-panels">
-                            <div id="code-aaa-2-panel1" class="tab-panel">
-                                <pre><code class="typescript hljs" data-trim data-line-numbers>
-                                    export interface ICounter {
-                                        value: number;
-                                    }
+                <!--<div class="tab-panels">-->
+                <!--<div id="code-aaa-2-panel1" class="tab-panel">-->
+                <!--<pre><code class="typescript hljs" data-trim data-line-numbers>-->
+                <!--export interface ICounter {-->
+                <!--value: number;-->
+                <!--}-->
 
-                                    export class Counter {
-                                        constructor(private state: ICounter) {}
+                <!--export class Counter {-->
+                <!--constructor(private state: ICounter) {}-->
 
-                                        get value(): number {
-                                            return this.state.value;
-                                        }
+                <!--get value(): number {-->
+                <!--return this.state.value;-->
+                <!--}-->
 
-                                        increment(value: number = 1) {
-                                            this.state = {
-                                                ...this.state,
-                                                value: this.state.value + value
-                                            };
-                                        }
-                                    }
-                                </code></pre>
-                            </div>
+                <!--increment(value: number = 1) {-->
+                <!--this.state = {-->
+                <!--...this.state,-->
+                <!--value: this.state.value + value-->
+                <!--};-->
+                <!--}-->
+                <!--}-->
+                <!--</code></pre>-->
+                <!--</div>-->
 
-                            <div id="code-aaa-2-panel2" class="tab-panel">
-                                <pre><code class="typescript hljs" data-trim data-line-numbers>
-                                    describe("increment", () => {
-                                        let counter: Counter;
+                <!--<div id="code-aaa-2-panel2" class="tab-panel">-->
+                <!--<pre><code class="typescript hljs" data-trim data-line-numbers>-->
+                <!--describe("increment", () => {-->
+                <!--let counter: Counter;-->
 
-                                        beforeEach(() => {
-                                            //arrange
-                                            counter = new Counter({ value: 0 });
-                                        });
+                <!--beforeEach(() => {-->
+                <!--//arrange-->
+                <!--counter = new Counter({ value: 0 });-->
+                <!--});-->
 
-                                        it("increments value by 1 if no argument passed", () => {
-                                            //act
-                                            counter.increment();
+                <!--it("increments value by 1 if no argument passed", () => {-->
+                <!--//act-->
+                <!--counter.increment();-->
 
-                                            //assert
-                                            expect(counter.value).toBe(1);
-                                        });
+                <!--//assert-->
+                <!--expect(counter.value).toBe(1);-->
+                <!--});-->
 
-                                        it("increments value by 2 if argument 2 passed", () => {
-                                            //act
-                                            counter.increment(2);
+                <!--it("increments value by 2 if argument 2 passed", () => {-->
+                <!--//act-->
+                <!--counter.increment(2);-->
 
-                                            //assert
-                                            expect(counter.value).toBe(2);
-                                        });
-                                    });
-                                </code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <!--//assert-->
+                <!--expect(counter.value).toBe(2);-->
+                <!--});-->
+                <!--});-->
+                <!--</code></pre>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</section>-->
 
                 <section>
                     <h2>Naming matters</h2>
@@ -365,9 +375,84 @@
                     <h2>Naming tips</h2>
                     <ul>
                         <li>show class/method being tested</li>
-                        <li>use <strong>describe</strong> to fold structure or conditions</li>
+                        <li>
+                            use <strong>describe</strong> to fold structure or
+                            conditions
+                        </li>
                         <li>use <strong>it</strong> to describe behaviour</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2>Minimum Passable Tests</h2>
+                    <ul>
+                        <li>tests are resistant to code changes</li>
+                        <li>closer to testing behavior over implementation</li>
+                        <li>no magic values</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>DRY – Don't repeat yourself</h2>
+                    <ul>
+                        <li>improve readability</li>
+                        <li>one source of changes</li>
+                        <li>avoid common pitfails – test should be isolated</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>One test – one check</h2>
+                    <ul>
+                        <li>shows clearly what failed</li>
+                        <li>ensures you are not asserting multiple cases in your&nbsp;tests</li>
+                        <li>but it's ok to test multiple properties of same object</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Don't test private methods</h2>
+                    <ul>
+                        <li><em>testing behaviour over implementation™</em></li>
+                        <li>private methods are never used standalone</li>
+                        <li>it's often indicates code smell 💩</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Avoid logic in tests</h2>
+                    <ul>
+                        <li>avoid loops and conditions – keep code simple</li>
+                        <li>less chance to make mistake in tests</li>
+                        <li>once more, focus on result, not test implementation</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Don't use constants in tests</h2>
+                    <ul>
+                        <li>my favorite <em>testing behaviour over implementation™</em></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Architecture tips</h2>
+                    <p><em>to be continued...</em></p>
+                    <img src="images/unit-test-passed.jpg" alt="unit-test-passed">
+                </section>
+
+                <section>
+                    <h2>References</h2>
+                    <div class="text text-left">
+                        <ul>
+                            <li><a href="https://docs.microsoft.com/ru-ru/dotnet/core/testing/unit-testing-best-practices">Unit testing best practices with .NET Core and .NET Standard</a></li>
+                            <li><a href="https://github.com/CareMessagePlatform/jasmine-styleguide">Jasmine Style Guide</a></li>
+                            <li><a href="https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters">Unit Tests, How to Write Testable Code and Why it Matters</a></li>
+                            <li><a href="https://dzone.com/articles/unit-testing-the-good-bad-amp-ugly">Unit Testing: The Good, Bad, and Ugly</a></li>
+                            <li><a href="https://techbeacon.com/app-dev-testing/no-1-unit-testing-best-practice-stop-doing-it">The No. 1 unit testing best practice: Stop doing it</a></li>
+                            <li><a href="https://www.hbo.com/westworld">[HBO] Westworld</a></li>
+                        </ul>
+                    </div>
                 </section>
             </div>
         </div>

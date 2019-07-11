@@ -1,4 +1,4 @@
-import { Counter, ICounter } from "../counter";
+import { Counter } from "../counter";
 
 describe('Minimum Passable Tests', () => {
     describe("Bad", () => {
