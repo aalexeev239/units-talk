@@ -3,7 +3,7 @@ export interface ICounter {
 }
 
 export class Counter {
-    constructor(private state: ICounter) {}
+    constructor(protected state: ICounter) {}
 
     get value(): number {
         return this.state.value;
