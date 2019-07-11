@@ -2,8 +2,8 @@ import {Counter} from './counter';
 
 export const MAX_VALUE = 100;
 
-export class FlushCounter extends Counter {
-    private flush() {
+export class ResetCounter extends Counter {
+    private reset() {
         this.state.value = 0;
     }
 
@@ -11,7 +11,7 @@ export class FlushCounter extends Counter {
         super.increment(value);
 
         if (this.value > MAX_VALUE) {
-            this.flush();
+            this.reset();
         }
     }
 }
