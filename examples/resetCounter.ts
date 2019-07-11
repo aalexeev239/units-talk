@@ -14,4 +14,16 @@ export class ResetCounter extends Counter {
             this.reset();
         }
     }
+
+    incrementWithReturn(value: number = 1) {
+        super.increment(value);
+
+        const result = this.value;
+
+        if (result > MAX_VALUE) {
+            this.reset();
+        }
+
+        return result;
+    }
 }
