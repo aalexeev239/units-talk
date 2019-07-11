@@ -66,7 +66,7 @@
                         </li>
                         <li>
                             owned by <strong class="green">team</strong>, not
-                            certain developers
+                            certain&nbsp;developers
                         </li>
                         <li>
                             <strong class="red">helps</strong> to solve problems
@@ -108,54 +108,6 @@
                         src="https://d2h1nbmw1jjnl.cloudfront.net/ckeditor/pictures/data/000/000/158/content/typical_pyramid-1024x938.jpg"
                         alt=""
                     />
-                </section>
-                <section>
-                    <h2>unicorns and rainbows</h2>
-                    <div class="text text-left">
-                        <p>
-                            You have brilliant app with low coupled modules and
-                            components. Independent layers of abstractions.
-                        </p>
-                        <p>
-                            Use units to test interactions from bottom to top on
-                            small pieces of code.
-                        </p>
-                    </div>
-                </section>
-                <section>
-                    <h2>something&nbsp;good, something&nbsp;not</h2>
-
-                    <div class="text text-left">
-                        <p>
-                            Your app is rather good with a portion of bugs and
-                            legacy.
-                        </p>
-                        <p>
-                            The biggest problem is to reduce dependencies
-                            between different parts of the system.
-                        </p>
-                        <p>
-                            Usually you add testing while refactoring big parts.
-                        </p>
-                        <p>
-                            Add more higher level tests firstly. Then you can
-                            extract low coupled components and cover them with
-                            units.
-                        </p>
-                    </div>
-                </section>
-                <section>
-                    <h2>holy sh*t</h2>
-                    <div class="text text-left">
-                        <p>
-                            It's extraordinary hard to write units. Lots of
-                            unpredictable behaviour.
-                        </p>
-                        <p>
-                            Use higher-level tests, then rewrite code. <br>TDD is a
-                            an option.
-                        </p>
-                    </div>
                 </section>
                 <section>
                     <h2>Must be <strong class="blue">UNIT</strong></h2>
@@ -203,23 +155,72 @@
                     </div>
                 </section>
                 <section>
+                    <h2><strong class="red">Unicorns</strong> and <strong class="green">rainbows</strong></h2>
+                    <div class="text text-left">
+                        <p>
+                            You have brilliant app with <strong class="yellow">low coupled modules</strong> and
+                            components. <strong class="blue">Independent layers</strong> of abstractions.
+                        </p>
+                        <p>
+                            Use units to test interactions from bottom to top on
+                            small pieces of code.
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <h2>something&nbsp;<strong class="green">good</strong>, something&nbsp;<strong class="red">not</strong></h2>
+
+                    <div class="text text-left">
+                        <p>
+                            Your app is rather good with a portion of bugs and
+                            legacy.
+                        </p>
+                        <p>
+                            The biggest problem is to <strong class="blue">reduce dependencies</strong>
+                            between different parts of the system.
+                        </p>
+                        <p>
+                            Usually you add testing while <strong class="yellow">refactoring</strong> big parts.
+                        </p>
+                        <p>
+                            Add more <strong class="red">higher-level tests</strong> firstly. Then you can
+                            <strong class="green">extract low coupled components</strong> and cover them with
+                            units.
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <h2>Holy sh<strong class="red">*</strong>t</h2>
+                    <div class="text text-left">
+                        <p>
+                            It's <strong class="red">extraordinary hard</strong> to write units. <br>Lots of
+                            unpredictable behaviour.
+                        </p>
+                        <p>
+                            <strong class="green">Use higher-level tests</strong>, then rewrite code. <br>TDD is a
+                            an option.
+                        </p>
+                    </div>
+                </section>
+                <section>
                     <h2>Code style</h2>
                 </section>
                 <section>
                     <h2>AAA. Arrange, Act, Assert</h2>
                     <ul>
                         <li>
-                            Arrange your objects, creating and setting them up
+                            <strong class="red">Arrange</strong> your objects, creating and setting them up
                             if&nbsp;necessary
                         </li>
-                        <li>Act on an object</li>
-                        <li>Assert that something is as expected</li>
+                        <li><strong class="blue">Act</strong> on an object</li>
+                        <li><strong class="green">Assert</strong> that something is as expected</li>
                     </ul>
                 </section>
                 <section>
                     <h2>AAA. Benefits</h2>
                     <ul>
-                        <li>shows what is being tested more clearly</li>
+                        <li>separate <strong class="blue">test setup</strong> and <strong class="green">check</strong></li>
+                        <li>shows <strong class="yellow">what is being tested</strong> more clearly</li>
                         <li>easy to read</li>
                         <li>improves DRY</li>
                     </ul>
@@ -366,72 +367,72 @@
                 <section>
                     <h2>Naming matters</h2>
                     <ul>
-                        <li>test suite can be used as a documentation</li>
-                        <li>failure messages describe what is broken</li>
-                        <li>enforces good naming</li>
+                        <li>test suite can be used as a <strong class="blue">documentation</strong></li>
+                        <li>failure messages describe <strong class="red">what is broken</strong></li>
+                        <li>enforces a <strong class="yellow">good naming</strong></li>
                     </ul>
                 </section>
                 <section>
                     <h2>Naming tips</h2>
                     <ul>
-                        <li>show class/method being tested</li>
+                        <li>show <strong class="blue">class/method</strong> being tested</li>
                         <li>
-                            use <strong>describe</strong> to fold structure or
+                            use <strong class="green">describe</strong> to fold structure or
                             conditions
                         </li>
-                        <li>use <strong>it</strong> to describe behaviour</li>
+                        <li>use <strong class="red">it</strong> to describe behaviour</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Minimum Passable Tests</h2>
+                    <h2><strong class="red">Minimum</strong> passable tests</h2>
                     <ul>
                         <li>tests are resistant to code changes</li>
                         <li>closer to testing behavior over implementation</li>
-                        <li>no magic values</li>
+                        <li>no <strong class="yellow">magic</strong> values</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>DRY – Don't repeat yourself</h2>
+                    <h2><strong class="blue">DRY</strong> – Don't repeat yourself</h2>
                     <ul>
                         <li>improve readability</li>
                         <li>one source of changes</li>
-                        <li>avoid common pitfails – test should be isolated</li>
+                        <li>avoid common <strong class="red">pitfails</strong> – test should be isolated</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>One test – one check</h2>
                     <ul>
-                        <li>shows clearly what failed</li>
+                        <li><strong class="yellow">shows clearly</strong> what failed</li>
                         <li>ensures you are not asserting multiple cases in your&nbsp;tests</li>
                         <li>but it's ok to test multiple properties of same object</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Don't test private methods</h2>
+                    <h2>Don't test <strong class="red">private</strong> methods</h2>
                     <ul>
                         <li><em>testing behaviour over implementation™</em></li>
                         <li>private methods are never used standalone</li>
-                        <li>it's often indicates code smell 💩</li>
+                        <li>it's often indicates <strong class="blue">code smell</strong> 💩</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Avoid logic in tests</h2>
                     <ul>
-                        <li>avoid loops and conditions – keep code simple</li>
+                        <li>avoid loops and conditions – <strong class="green">keep code simple</strong></li>
                         <li>less chance to make mistake in tests</li>
-                        <li>once more, focus on result, not test implementation</li>
+                        <li>once more, <strong class="blue">focus on result</strong>, not test implementation</li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Don't use constants in tests</h2>
                     <ul>
-                        <li>my favorite <em>testing behaviour over implementation™</em></li>
+                        <li>my favorite <strong class="yellow"><em>testing behaviour over implementation™</em></strong></li>
                     </ul>
                 </section>
 
