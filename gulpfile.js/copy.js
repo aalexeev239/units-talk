@@ -13,12 +13,16 @@ function copyPrintCss() {
     return gulp.src("css/print/**/*").pipe(gulp.dest(`${PATHS.distAssets}/css/print`));
 }
 
+function copyImages() {
+    return gulp.src("images/**/*").pipe(gulp.dest(`${PATHS.distAssets}/images`));
+}
+
 function copyJS() {
     return gulp
         .src(`${PATHS.assets}/js/**`)
         .pipe(gulp.dest(`${PATHS.distAssets}/js`));
 }
 
-const copy = gulp.parallel(copyPlugins, copyLib, copyJS, copyPrintCss);
+const copy = gulp.parallel(copyPlugins, copyLib, copyJS, copyPrintCss, copyImages);
 
 module.exports = copy;

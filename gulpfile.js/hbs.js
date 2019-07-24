@@ -11,14 +11,17 @@ function hbs() {
             const locale = file.stem;
             const data = {
                 locale: locale,
-                i18n: JSON.parse(file.contents.toString())
+                ru: locale === 'ru',
+                en: locale === 'en',
+                i18n: JSON.parse(file.contents.toString()),
+                assets: '../assets'
             };
 
             gulp.src(`${PATHS.src}/main.html`)
                 .pipe(
                     hb()
                         // .helpers(helpers())
-                        .partials(`${PATHS.assets}/partials/**/*.hbs`)
+                        .partials(`${PATHS.assets}/partials/**/*.{hbs,html}`)
                         .data(data)
                 )
                 .pipe(rename('index.html'))
