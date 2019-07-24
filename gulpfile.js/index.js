@@ -1,31 +1,19 @@
 const gulp = require("gulp");
-const browserSync = require("browser-sync").create();
-const hbs = require("./hbs.js");
 const del = require("del");
 const PATHS = require("./PATHS.json");
-
-function livereload(cb) {
-    browserSync.reload();
-    cb();
-}
-
-function clean() {
-    return del(PATHS.dist);
-}
-
-function copy() {
-    return gulp.src("plugin/**/*").pipe(gulp.dest(`${PATHS.dist}/plugin`));
-}
+const styles = require("./styles.js");
+const hbs = require("./hbs.js");
+const copy = require("./copy.js");
+const clean = require("./clean.js");
+const { livereload, initLivereload } = require("./livereload.js");
 
 function watch() {
-    browserSync.init({
-        server: {
-            baseDir: PATHS.dist
-        }
-    });
+    initLivereload();
 
     gulp.watch(`${PATHS.src}/**/*`, gulp.series(hbs, livereload));
 }
 
-exports.watch = gulp.series(clean, copy, hbs, watch);
-exports.clean = gulp.series(clean, copy, hbs);
+const build = gulp.series(clean, gulp.parallel(styles, copy, hbs));
+
+exports.watch = gulp.series(build, watch);
+exports.build = build;

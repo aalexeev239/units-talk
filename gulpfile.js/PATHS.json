@@ -1,5 +1,6 @@
 {
     "dist": "./dist",
     "src": "./src",
-    "assets": "./src/assets"
+    "assets": "./src/assets",
+    "styles": "./css"
 }
