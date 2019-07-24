@@ -1,4 +1,12 @@
 <section>
+    {{#if ru}}
+    <h2>Что такое юнит</h2>
+    <p>
+        Юнит-тест выделяет
+        <strong class="yellow">небольшую часть</strong> приложения и проверяет ее поведение
+        <strong class="blue">независимо</strong> от других частей
+    </p>
+    {{else}}
     <h2>What is unit</h2>
     <p>
         Unit test instantiates a
@@ -7,4 +15,5 @@
         <strong class="blue">independently</strong> from other
         parts
     </p>
+    {{/if}}
 </section>
