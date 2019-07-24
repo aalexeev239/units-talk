@@ -11,9 +11,13 @@ function watch() {
     initLivereload();
 
     gulp.watch(`${PATHS.src}/**/*`, gulp.series(hbs, livereload));
+    gulp.watch(`${PATHS.styles}/**/*`, gulp.series(styles));
 }
 
 const build = gulp.series(clean, gulp.parallel(styles, copy, hbs));
 
 exports.watch = gulp.series(build, watch);
 exports.build = build;
+exports.styles = gulp.series(clean, styles);
+exports.clean = gulp.series(clean);
+exports.copy = gulp.series(clean, copy);

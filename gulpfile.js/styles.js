@@ -18,7 +18,7 @@ function styles() {
                 cascade: false
             })
         )
-        .pipe(gulp.dest(`${PATHS.dist}/css`))
+        .pipe(gulp.dest(`${PATHS.distAssets}/css`))
         .pipe(reload({ stream: true }));
 }
 
