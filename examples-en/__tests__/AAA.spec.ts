@@ -1,7 +1,7 @@
 import { Counter, ICounter } from "../counter";
 
-describe("AAA", () => {
-    describe("Single", () => {
+describe("AAA – Arrange, Act, Assert", () => {
+    describe("Одиночный тест", () => {
         it("increments value by one", () => {
             //arrange
             const counter = new Counter({ value: 0 });
