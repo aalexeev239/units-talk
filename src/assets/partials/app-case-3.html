@@ -1,4 +1,15 @@
 <section>
+    {{#if ru}}
+    <h2>без <strong class="red">слез</strong> не взглянешь</h2>
+    <div class="text text-left">
+        <p>
+            Писать тесты <strong class="red">невероятно сложно</strong>.<br>Приложение ведет себя непредсказуемо.
+        </p>
+        <p>
+            <strong class="green">Создайте высокоуровневые тесты</strong>, потом перепишите весь код. <br>Как вариант, используя TDD.
+        </p>
+    </div>
+    {{else}}
     <h2>Holy sh<strong class="red">*</strong>t</h2>
     <div class="text text-left">
         <p>
@@ -10,4 +21,5 @@
             an option.
         </p>
     </div>
+    {{/if}}
 </section>

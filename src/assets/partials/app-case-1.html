@@ -1,4 +1,18 @@
 <section>
+    {{#if ru}}
+    <h2><strong class="green">радуги</strong> и <strong class="red">единороги</strong></h2>
+    <div class="text text-left">
+        <p>
+            В вашем приложении божественная архитектура.
+            <br>
+            Код состоит из <strong class="yellow">слабо связанных модулей</strong>,
+            разнесенных на <strong class="blue">независимые слои</strong> абстракций.
+        </p>
+        <p>
+            Используйте юнит-тесты для тестирования отдельных частей системы и их взаимосвязей друг с другом.
+        </p>
+    </div>
+    {{else}}
     <h2><strong class="red">Unicorns</strong> and <strong class="green">rainbows</strong></h2>
     <div class="text text-left">
         <p>
@@ -10,4 +24,5 @@
             small pieces of code.
         </p>
     </div>
+    {{/if}}
 </section>

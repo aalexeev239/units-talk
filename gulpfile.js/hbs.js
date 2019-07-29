@@ -11,20 +11,21 @@ function hbs() {
             const locale = file.stem;
             const data = {
                 locale: locale,
-                ru: locale === 'ru',
-                en: locale === 'en',
+                ru: locale === "ru",
+                en: locale === "en",
                 i18n: JSON.parse(file.contents.toString()),
-                assets: '../assets'
+                assets: "../assets"
             };
 
             gulp.src(`${PATHS.src}/main.html`)
                 .pipe(
                     hb()
                         // .helpers(helpers())
+                        .helpers(`${PATHS.assets}/helpers/**/*.js`)
                         .partials(`${PATHS.assets}/partials/**/*.{hbs,html}`)
                         .data(data)
                 )
-                .pipe(rename('index.html'))
+                .pipe(rename("index.html"))
                 .pipe(gulp.dest(`${PATHS.dist}/${locale}`))
                 .on("error", cb)
                 .on("end", cb);

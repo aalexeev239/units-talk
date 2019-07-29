@@ -1,4 +1,24 @@
 <section>
+    {{#if ru}}
+    <h2 class="title-small">что-то&nbsp;<strong class="green">классно</strong>, что-то <strong class="red">не очень</strong></h2>
+
+    <div class="text text-left">
+        <p>
+            В целом все хорошо, хоть и не без багов и легаси.
+        </p>
+        <p>
+            Наибольшая проблема — <strong class="blue">уменьшение зависимостей</strong>
+            между различными частями системы.
+        </p>
+        <p>
+            Тестирование обычно добавляется при <strong class="yellow">рефакторинге</strong> больших блоков.
+        </p>
+        <p>
+            Сперва добавьте более <strong class="red">высокоуровневые тесты</strong>. Затем
+            <strong class="green">выделите слабо связанные части</strong> и покройте их юнитами.
+        </p>
+    </div>
+    {{else}}
     <h2>something&nbsp;<strong class="green">good</strong>, something&nbsp;<strong class="red">not</strong></h2>
 
     <div class="text text-left">
@@ -19,4 +39,5 @@
             units.
         </p>
     </div>
+    {{/if}}
 </section>

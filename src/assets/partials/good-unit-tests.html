@@ -1,4 +1,22 @@
 <section>
+    {{#if ru}}
+    <h2>Хорошие юнит-тесты</h2>
+    <ul class="text-small">
+        <li class="fragment1">
+            <strong class="yellow">Быстрые</strong> <br />В вашем приложении будут тысячи тестов. Тысячи,{{nbsp}}Карл.
+        </li>
+        <li class="fragment1">
+            <strong class="blue">Изолированные</strong> <br />Без зависимостей и сайд-эффектов
+        </li>
+        <li class="fragment1">
+            <strong class="red">Повторяемые</strong> <br />
+            Тест должен быть предсказуем. Результат не{{nbsp}}изменится, пока вы что-то не поменяете в коде.
+        </li>
+        <li class="fragment1">
+            <strong class="green">Уместные</strong> <br />Тесты не должны писаться дольше основного кода
+        </li>
+    </ul>
+    {{else}}
     <h2>Good unit tests are</h2>
     <ul class="text-small">
         <li class="fragment">
@@ -21,4 +39,5 @@
             writing test should be comparable to writing code
         </li>
     </ul>
+    {{/if}}
 </section>
