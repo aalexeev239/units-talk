@@ -10,7 +10,7 @@
     },
     "jest": {
         "verbose": true,
-        "rootDir": "./examples",
+        "roots": ["./examples-en", "./examples-ru"],
         "transform": {
             "^.+\\.tsx?$": "ts-jest"
         }
