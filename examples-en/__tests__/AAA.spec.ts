@@ -1,8 +1,8 @@
 import { Counter, ICounter } from "../counter";
 
 describe("AAA – Arrange, Act, Assert", () => {
-    describe("Одиночный тест", () => {
-        it("increments value by one", () => {
+    describe("Один тест", () => {
+        it("increment | увеличивает значение на 1", () => {
             //arrange
             const counter = new Counter({ value: 0 });
 
@@ -14,8 +14,8 @@ describe("AAA – Arrange, Act, Assert", () => {
         });
     });
 
-    describe("Multi", () => {
-        describe("increment", () => {
+    describe("Несколько тестов", () => {
+        describe("increment | увеличение значения", () => {
             let counter: Counter;
 
             beforeEach(() => {
@@ -23,7 +23,7 @@ describe("AAA – Arrange, Act, Assert", () => {
                 counter = new Counter({ value: 0 });
             });
 
-            it("increments value by 1 if no argument passed", () => {
+            it("увеличивает значение на 1, если не передано аргументов", () => {
                 //act
                 counter.increment();
 
@@ -31,7 +31,7 @@ describe("AAA – Arrange, Act, Assert", () => {
                 expect(counter.value).toBe(1);
             });
 
-            it("increments value by 2 if argument 2 passed", () => {
+            it("увеличивает значение на 2, вызвано с аргументом 2", () => {
                 //act
                 counter.increment(2);
 
