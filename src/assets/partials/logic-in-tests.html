@@ -1,8 +1,17 @@
 <section>
+    {{#if ru}}
+    <h2>Избегайте логики в тестах</h2>
+    <ul>
+        <li>уберите циклы и условия — <strong class="green">тест&nbsp;должен&nbsp;быть&nbsp;простым</strong></li>
+        <li>меньше шансов допустить ошибку в самих тестах</li>
+        <li>и еще раз, <strong class="blue">фокусируйтесь на результате</strong>, не проверяйте реализацию</li>
+    </ul>
+    {{else}}
     <h2>Avoid logic in tests</h2>
     <ul>
         <li>avoid loops and conditions – <strong class="green">keep code simple</strong></li>
         <li>less chance to make mistake in tests</li>
         <li>once more, <strong class="blue">focus on result</strong>, not test implementation</li>
     </ul>
+    {{/if}}
 </section>

@@ -1,8 +1,17 @@
 <section>
+    {{#if ru}}
+    <h2>Именование важно</h2>
+    <ul>
+        <li>тесты могут быть <strong class="blue">документацией</strong></li>
+        <li>упавшие тесты описывают, <strong class="red">что сломалось</strong></li>
+        <li>улучшается <strong class="yellow">именование кода</strong></li>
+    </ul>
+    {{else}}
     <h2>Naming matters</h2>
     <ul>
         <li>test suite can be used as a <strong class="blue">documentation</strong></li>
         <li>failure messages describe <strong class="red">what is broken</strong></li>
-        <li>enforces a <strong class="yellow">good naming</strong></li>
+        <li>enforces a <strong class="yellow">good naming</strong> in code</li>
     </ul>
+    {{/if}}
 </section>

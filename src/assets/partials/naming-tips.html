@@ -1,4 +1,14 @@
 <section>
+    {{#if ru}}
+    <h2>как именовать</h2>
+    <ul>
+        <li>покажите, какой <strong class="blue">класс/метод</strong> тестируются</li>
+        <li>
+            используйте <strong class="green">describe</strong> для создания структуры тестов
+        </li>
+        <li>используйте <strong class="red">it</strong> для описания поведения</li>
+    </ul>
+    {{else}}
     <h2>Naming tips</h2>
     <ul>
         <li>show <strong class="blue">class/method</strong> being tested</li>
@@ -8,4 +18,5 @@
         </li>
         <li>use <strong class="red">it</strong> to describe behaviour</li>
     </ul>
+    {{/if}}
 </section>

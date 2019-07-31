@@ -1,6 +1,6 @@
 import { Counter } from "../counter";
 
-describe('Минимально проходимые тесты', () => {
+describe('Минимально необходимые тесты', () => {
     describe("Плохо", () => {
         it("инициализируется с переданным значением", () => {
             const counter = new Counter({ value: 19 });

@@ -1,9 +1,19 @@
 <section>
+    {{#if ru}}
+    <h2>AAA. Плюсы</h2>
+    <ul>
+        <li>отделяем <strong class="red">подготовку теста</strong> от <strong class="green">проверки</strong></li>
+        <li>явно показываем,  <strong class="yellow">что тестируется</strong></li>
+        <li>тест легко читать</li>
+        <li>увеличиваем <strong class="blue">DRY</strong></li>
+    </ul>
+    {{else}}
     <h2>AAA. Benefits</h2>
     <ul>
-        <li>separate <strong class="blue">test setup</strong> and <strong class="green">check</strong></li>
+        <li>separate <strong class="red">test setup</strong> and <strong class="green">check</strong></li>
         <li>shows <strong class="yellow">what is being tested</strong> more clearly</li>
         <li>easy to read</li>
-        <li>improves DRY</li>
+        <li>improves <strong class="blue">DRY</strong></li>
     </ul>
+    {{/if}}
 </section>

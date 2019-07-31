@@ -1,5 +1,14 @@
 <section>
     <h2>AAA. Arrange, Act, Assert</h2>
+    {{#if ru}}
+    <ul>
+        <li>
+            <strong class="red">Arrange</strong> подготовьте объекты, создав и установив все&nbsp;необходимое
+        </li>
+        <li><strong class="blue">Act</strong> произведите действие</li>
+        <li><strong class="green">Assert</strong> проверьте результат</li>
+    </ul>
+    {{else}}
     <ul>
         <li>
             <strong class="red">Arrange</strong> your objects, creating and setting them up
@@ -8,4 +17,5 @@
         <li><strong class="blue">Act</strong> on an object</li>
         <li><strong class="green">Assert</strong> that something is as expected</li>
     </ul>
+    {{/if}}
 </section>

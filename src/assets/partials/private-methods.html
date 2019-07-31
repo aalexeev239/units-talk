@@ -1,8 +1,17 @@
 <section>
+    {{#if ru}}
+    <h2 class="title-small">Не тестируйте <strong class="red">приватные</strong>&nbsp;методы</h2>
+    <ul>
+        <li><em>тестируйте поведение, а не реализацию™</em></li>
+        <li>приватные методы никогда не используются отдельно</li>
+        <li>это часто индикатор <strong class="blue">запашка от кода</strong> 💩</li>
+    </ul>
+    {{else}}
     <h2>Don't test <strong class="red">private</strong> methods</h2>
     <ul>
         <li><em>testing behaviour over implementation™</em></li>
         <li>private methods are never used standalone</li>
         <li>it's often indicates <strong class="blue">code smell</strong> 💩</li>
     </ul>
+    {{/if}}
 </section>

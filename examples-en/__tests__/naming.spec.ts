@@ -1,6 +1,6 @@
 import { Counter } from "../counter";
 
-describe('Naming', () => {
+describe('Именование', () => {
     describe("Bad", () => {
         it("passes", () => {
             const counter = new Counter({ value: 0 });

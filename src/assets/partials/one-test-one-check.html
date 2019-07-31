@@ -1,8 +1,17 @@
 <section>
+    {{#if ru}}
+    <h2>Одна проверка – один тест</h2>
+    <ul>
+        <li><strong class="yellow">явно показывается</strong>, что упало</li>
+        <li>точно знаем, что в одном тесте не проверяется несколько кейсов</li>
+        <li>(при этом допускается несколько проверок для одного объекта)</li>
+    </ul>
+    {{else}}
     <h2>One test – one check</h2>
     <ul>
         <li><strong class="yellow">shows clearly</strong> what failed</li>
         <li>ensures you are not asserting multiple cases in your&nbsp;tests</li>
-        <li>but it's ok to test multiple properties of same object</li>
+        <li>(but it's ok to test multiple properties of same object)</li>
     </ul>
+    {{/if}}
 </section>

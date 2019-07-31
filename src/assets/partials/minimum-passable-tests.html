@@ -1,8 +1,17 @@
 <section>
+    {{#if ru}}
+    <h2 class="title-small"><strong class="red">Минимально</strong> необходимые&nbsp;тесты</h2>
+    <ul>
+        <li>тесты устойчивы к изменениям кода</li>
+        <li>приближаются к тестированию поведения, а не реализации</li>
+        <li>без <strong class="yellow">магических</strong> значений</li>
+    </ul>
+    {{else}}
     <h2><strong class="red">Minimum</strong> passable tests</h2>
     <ul>
         <li>tests are resistant to code changes</li>
         <li>closer to testing behavior over implementation</li>
         <li>no <strong class="yellow">magic</strong> values</li>
     </ul>
+    {{/if}}
 </section>
