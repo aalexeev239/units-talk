@@ -1,6 +1,6 @@
-import {MAX_VALUE, ResetCounter} from '../resetCounter';
+import { ResetCounter } from "../resetCounter";
 
-describe('Logic in tests', () => {
+describe("Логика в тестах", () => {
     function testIncrement(value, expected) {
         const counter = new ResetCounter({ value: 0 });
 
@@ -9,29 +9,25 @@ describe('Logic in tests', () => {
         expect(counter.value).toBe(expected);
     }
 
-    describe("Bad", () => {
-        it("increment works", () => {
-            const testData = [
-                [0, 0],
-                [1, 1],
-                [10, 10],
-                [100, 100],
-                [101, 0]
-            ];
+    describe("Плохо", () => {
+        it("increment работает", () => {
+            const testData = [[0, 0], [1, 1], [10, 10], [100, 100], [101, 0]];
 
-            testData.forEach(([value, expected]) => testIncrement(value, expected))
+            testData.forEach(([value, expected]) =>
+                testIncrement(value, expected)
+            );
         });
     });
 
-    describe("Worse", () => {
-        it("increment works", () => {
+    describe("Хуже", () => {
+        it("increment работает", () => {
             let value = 0;
 
-            while(value < 200) {
+            while (value < 200) {
                 if (value <= 100) {
-                    testIncrement(value, value)
+                    testIncrement(value, value);
                 } else {
-                    testIncrement(value, 0)
+                    testIncrement(value, 0);
                 }
 
                 value += 1;
@@ -39,15 +35,15 @@ describe('Logic in tests', () => {
         });
     });
 
-    describe('Better', () => {
-        it('if called with argument 100, increase value by 100', () => {
+    describe("Лучше", () => {
+        it("если вызывается с аргументом 100, значение увеличивается на 100", () => {
             const counter = new ResetCounter({ value: 0 });
 
             counter.increment(100);
             expect(counter.value).toBe(100);
         });
 
-        it('if called with argument 101, reset value to 0', () => {
+        it("если вызывается с аргументом 101, значение сбрасывается в 0", () => {
             const counter = new ResetCounter({ value: 0 });
 
             counter.increment(101);

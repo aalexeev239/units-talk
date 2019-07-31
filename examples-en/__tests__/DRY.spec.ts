@@ -46,7 +46,7 @@ describe("DRY", () => {
                 expect(counter.value).toBe(1);
             });
 
-            it("if called with argument 2, increase value by 2", () => {
+            it("[this test will fail] if called with argument 2, increase value by 2", () => {
                 counter.increment(2);
                 expect(counter.value).toBe(2);
                 // Expected: 2
@@ -70,7 +70,7 @@ describe("DRY", () => {
                 expect(counter.value).toBe(1);
             });
 
-            it("if called with argument 2, increase value by 2", () => {
+            it("[this test will fail] if called with argument 2, increase value by 2", () => {
                 counter.increment(2);
                 expect(counter.value).toBe(2);
                 // Expected: 2

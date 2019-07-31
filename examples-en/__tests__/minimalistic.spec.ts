@@ -9,7 +9,7 @@ describe('Minimum Passable Tests', () => {
         });
     });
 
-    describe("Bad", () => {
+    describe("Better", () => {
         it("initialises with passed value", () => {
             const counter = new Counter({ value: 0 });
 

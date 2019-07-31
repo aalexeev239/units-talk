@@ -1,15 +1,15 @@
 import { Counter, ICounter } from "../counter";
 
 describe("DRY", () => {
-    describe("Bad", () => {
+    describe("Плохо", () => {
         describe("increment", () => {
-            it("if called with argument 1, increase value by 1", () => {
+            it("если вызывается с аргументом 1, значение увеличивается на 1", () => {
                 const counter = new Counter({ value: 0 });
                 counter.increment(1);
                 expect(counter.value).toBe(1);
             });
 
-            it("if called with argument 2, increase value by 2", () => {
+            it("если вызывается с аргументом 2, значение увеличивается на 2", () => {
                 const counter = new Counter({ value: 0 });
                 counter.increment(2);
                 expect(counter.value).toBe(2);
@@ -17,7 +17,7 @@ describe("DRY", () => {
         });
     });
 
-    describe("Better", () => {
+    describe("Лучше", () => {
         describe("increment", () => {
             let counter;
 
@@ -25,28 +25,28 @@ describe("DRY", () => {
                 counter = new Counter({ value: 0 });
             });
 
-            it("if called with argument 1, increase value by 1", () => {
+            it("если вызывается с аргументом 1, значение увеличивается на 1", () => {
                 counter.increment(1);
                 expect(counter.value).toBe(1);
             });
 
-            it("if called with argument 2, increase value by 2", () => {
+            it("если вызывается с аргументом 2, значение увеличивается на 2", () => {
                 counter.increment(2);
                 expect(counter.value).toBe(2);
             });
         });
     });
 
-    describe("Pitfail 1 – not isolated tests", () => {
+    describe("Проблема 1 – не изолированные тесты", () => {
         describe("increment", () => {
             const counter = new Counter({ value: 0 });
 
-            it("if called with argument 1, increase value by 1", () => {
+            it("если вызывается с аргументом 1, значение увеличивается на 1", () => {
                 counter.increment(1);
                 expect(counter.value).toBe(1);
             });
 
-            it("if called with argument 2, increase value by 2", () => {
+            it("[этот тест упадет] если вызывается с аргументом 2, значение увеличивается на 2", () => {
                 counter.increment(2);
                 expect(counter.value).toBe(2);
                 // Expected: 2
@@ -55,7 +55,7 @@ describe("DRY", () => {
         });
     });
 
-    describe("Pitfail 2 – using mocks", () => {
+    describe("Проблема 2 – использование моков", () => {
         const mock = { value: 0 };
 
         describe("increment", () => {
@@ -65,12 +65,12 @@ describe("DRY", () => {
                 counter = new Counter(mock);
             });
 
-            it("if called with argument 1, increase value by 1", () => {
+            it("если вызывается с аргументом 1, значение увеличивается на 1", () => {
                 counter.increment(1);
                 expect(counter.value).toBe(1);
             });
 
-            it("if called with argument 2, increase value by 2", () => {
+            it("[этот тест упадет] если вызывается с аргументом 2, значение увеличивается на 2", () => {
                 counter.increment(2);
                 expect(counter.value).toBe(2);
                 // Expected: 2
@@ -79,7 +79,7 @@ describe("DRY", () => {
         });
     });
 
-    describe("Pitfail 2 fixed – using mocks", () => {
+    describe("Проблема 2 исправлена – использование моков", () => {
         function getMock(): ICounter {
             return { value: 0 };
         }
@@ -90,12 +90,12 @@ describe("DRY", () => {
             counter = new Counter(getMock());
         });
 
-        it("if called with argument 1, increase value by 1", () => {
+        it("если вызывается с аргументом 1, значение увеличивается на 1", () => {
             counter.increment(1);
             expect(counter.value).toBe(1);
         });
 
-        it("if called with argument 2, increase value by 2", () => {
+        it("если вызывается с аргументом 2, значение увеличивается на 2", () => {
             counter.increment(2);
             expect(counter.value).toBe(2);
         });

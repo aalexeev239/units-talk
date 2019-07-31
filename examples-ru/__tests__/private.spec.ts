@@ -1,8 +1,8 @@
 import {ResetCounter} from '../resetCounter';
 
-describe('Private methods', () => {
-    describe("Bad", () => {
-        it("reset works", () => {
+describe('Тестирование приватных методов', () => {
+    describe("Плохо", () => {
+        it("reset работает", () => {
             const resetCounter = new ResetCounter({value: 10});
 
             (resetCounter as any).reset();
@@ -11,8 +11,8 @@ describe('Private methods', () => {
         });
     });
 
-    describe("Also bad", () => {
-        it("reset called when incrementing above 100", () => {
+    describe("Тоже плохо", () => {
+        it("reset вызывается при увеличении значения на 100", () => {
             const resetCounter = new ResetCounter({value: 100});
 
             const spy = jest.spyOn((resetCounter as any), 'reset');
@@ -23,8 +23,8 @@ describe('Private methods', () => {
         });
     });
 
-    describe('Better', () => {
-        it("value resets when incrementing above 100", () => {
+    describe('Лучше', () => {
+        it("значение сбрасывается вызывается при увеличении значения на 100", () => {
             const resetCounter = new ResetCounter({value: 100});
 
             resetCounter.increment(1);

@@ -1,8 +1,8 @@
 import { Counter } from "../counter";
 
-describe('Naming', () => {
-    describe("Bad", () => {
-        it("passes", () => {
+describe('Нэйминг', () => {
+    describe("Плохо", () => {
+        it("работает", () => {
             const counter = new Counter({ value: 0 });
 
             counter.increment();
@@ -10,26 +10,26 @@ describe('Naming', () => {
         });
     });
 
-    describe('Better', () => {
-        describe("Counter", () => {
-            describe("increment", () => {
+    describe('Лучше', () => {
+        describe("Counter | счетчик", () => {
+            describe("increment | увеличение значения", () => {
                 let counter: Counter;
 
                 beforeEach(() => {
                     counter = new Counter({ value: 0 });
                 });
 
-                it("if called without argument, increase value by 1", () => {
+                it("если вызывается без аргументов, значение увеличивается на 1", () => {
                     counter.increment();
                     expect(counter.value).toBe(1);
                 });
 
-                it("if called with argument 1, increase value by 1", () => {
+                it("если вызывается с аргументом 1, значение увеличивается на 1", () => {
                     counter.increment(1);
                     expect(counter.value).toBe(1);
                 });
 
-                it("if called with argument 2, increase value by 2", () => {
+                it("если вызывается с аргументом 2, значение увеличивается на 2", () => {
                     counter.increment(2);
                     expect(counter.value).toBe(2);
                 });
@@ -37,32 +37,32 @@ describe('Naming', () => {
         });
     });
 
-    describe('More better', () => {
-        describe("Counter", () => {
-            describe("increment", () => {
+    describe('Еще лучше', () => {
+        describe("Counter | счетчик", () => {
+            describe("increment | увеличение значения", () => {
                 let counter: Counter;
 
                 beforeEach(() => {
                     counter = new Counter({ value: 0 });
                 });
 
-                describe("called without argument", () => {
+                describe("если вызывается без аргументов", () => {
                     beforeEach(() => {
                         counter.increment();
                     });
 
-                    it("increase value by 1", () => {
+                    it("значение увеличивается на 1", () => {
                         expect(counter.value).toBe(1);
                     });
                 });
 
-                describe("called with argument", () => {
-                    it("if called with 1, increase value by 1", () => {
+                describe("если вызывается с аргументом", () => {
+                    it("если вызывается с аргументом 1, значение увеличивается на 1", () => {
                         counter.increment(1);
                         expect(counter.value).toBe(1);
                     });
 
-                    it("if called with 2, increase value by 2", () => {
+                    it("если вызывается с аргументом 2, значение увеличивается на 2", () => {
                         counter.increment(2);
                         expect(counter.value).toBe(2);
                     });
@@ -71,41 +71,41 @@ describe('Naming', () => {
         });
     });
 
-    describe("That's ok! (opinionated)", () => {
-        describe("increment", () => {
+    describe("Так тоже норм! (холиварно)", () => {
+        describe("increment | увеличение значения", () => {
             let counter: Counter;
 
             beforeEach(() => {
                 counter = new Counter({ value: 0 });
             });
 
-            describe("called without argument", () => {
+            describe("если вызывается без аргументов", () => {
                 beforeEach(() => {
                     counter.increment();
                 });
 
-                it("increase value by 1", () => {
+                it("значение увеличивается на 1", () => {
                     expect(counter.value).toBe(1);
                 });
             });
 
-            describe("called with argument", () => {
-                describe('called with 1', () => {
+            describe("если вызывается с аргументом", () => {
+                describe('если вызывается с аргументом 1', () => {
                     beforeEach(() => {
                         counter.increment(1);
                     });
 
-                    it("increase value by 1", () => {
+                    it("значение увеличивается на 1", () => {
                         expect(counter.value).toBe(1);
                     });
                 });
 
-                describe('called with 2', () => {
+                describe('если вызывается с аргументом 2', () => {
                     beforeEach(() => {
                         counter.increment(2);
                     });
 
-                    it("increase value by 2", () => {
+                    it("значение увеличивается на 2", () => {
                         expect(counter.value).toBe(2);
                     });
                 });
