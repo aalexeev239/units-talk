@@ -10,7 +10,10 @@
     },
     "jest": {
         "verbose": true,
-        "roots": ["./examples-en", "./examples-ru"],
+        "roots": [
+            "./examples-en",
+            "./examples-ru"
+        ],
         "transform": {
             "^.+\\.tsx?$": "ts-jest"
         }
@@ -42,6 +45,7 @@
         "grunt-zip": "~0.17.1",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^6.1.0",
+        "gulp-gh-pages": "^0.5.4",
         "gulp-hb": "^8.0.0",
         "gulp-sass": "^4.0.2",
         "handlebars-helpers": "^0.10.0",

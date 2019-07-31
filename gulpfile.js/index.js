@@ -5,6 +5,8 @@ const styles = require("./styles.js");
 const hbs = require("./hbs.js");
 const copy = require("./copy.js");
 const clean = require("./clean.js");
+const deploy = require("./deploy.js");
+
 const { livereload, initLivereload } = require("./livereload.js");
 
 function watch() {
@@ -21,3 +23,4 @@ exports.build = build;
 exports.styles = gulp.series(clean, styles);
 exports.clean = gulp.series(clean);
 exports.copy = gulp.series(clean, copy);
+exports.deploy = gulp.series(build, deploy);
