@@ -6,7 +6,7 @@
         "test:watch": "jest --watch",
         "start": "gulp watch",
         "build": "gulp build",
-        "publish": "gulp deploy"
+        "deploy": "gulp deploy"
     },
     "jest": {
         "verbose": true,
