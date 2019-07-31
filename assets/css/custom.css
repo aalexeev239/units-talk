@@ -461,3 +461,27 @@ strong.blue {
   font-size: 36px; }
   .text.text-left {
     text-align: left; }
+
+.flags {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex; }
+  .flags.hidden {
+    display: none; }
+  .flags a {
+    margin: 0 4px;
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    line-height: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s; }
+    .flags a:hover, .flags a:focus {
+      opacity: 1; }
+    .flags a.active {
+      box-shadow: 0 0 0 2px #35A7FF;
+      cursor: default; }
+      .flags a.active:hover, .flags a.active:focus {
+        opacity: 0.7; }

@@ -25,288 +25,370 @@
         </script>
     </head>
     <body class="ru">
-    <div class="reveal">
-        <div class="slides">
-
-            <section
-                data-background="../assets/images/unit-main.jpg"
-                class="animate-letters"
+        <div id="flags" class="flags hidden" data-locale="ru">
+            <a href="" data-flag="en" title="en">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+                    <defs>
+                        <clipPath id="a">
+                            <path fill-opacity=".7" d="M-85.3 0h682.6v512H-85.3z"/>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#a)" transform="translate(80) scale(.94)">
+                        <g stroke-width="1pt">
+                            <path fill="#012169" d="M-256 0H768v512H-256z"/>
+                            <path fill="#fff" d="M-256 0v57.2L653.5 512H768v-57.2L-141.5 0H-256zM768 0v57.2L-141.5 512H-256v-57.2L653.5 0H768z"/>
+                            <path fill="#fff" d="M170.7 0v512h170.6V0H170.7zM-256 170.7v170.6H768V170.7H-256z"/>
+                            <path fill="#c8102e" d="M-256 204.8v102.4H768V204.8H-256zM204.8 0v512h102.4V0H204.8zM-256 512L85.3 341.3h76.4L-179.7 512H-256zm0-512L85.3 170.7H9L-256 38.2V0zm606.4 170.7L691.7 0H768L426.7 170.7h-76.3zM768 512L426.7 341.3H503l265 132.5V512z"/>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+        
+            <a href="" data-flag="ru" title="ru">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+                    <g fill-rule="evenodd" stroke-width="1pt">
+                        <path fill="#fff" d="M0 0h640v480H0z"/>
+                        <path fill="#0039a6" d="M0 160h640v320H0z"/>
+                        <path fill="#d52b1e" d="M0 320h640v160H0z"/>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="reveal">
+            <div class="slides">
+                   <section
+    data-background="../assets/images/unit-main.jpg"
+    class="animate-letters"
+>
+    <span>Ю</span>
+    <span>Н</span>
+    <span>И</span>
+    <span>Т</span>
+    <br />
+    <span>Т</span>
+    <span>Е</span>
+    <span>С</span>
+    <span>Т</span>
+    <span class="special">Ы</span>
+</section>
+ <section>
+    <h2>Что такое юнит-тест</h2>
+    <p>
+        Юнит-тест выделяет
+        <strong class="yellow">небольшую часть</strong> приложения и проверяет ее поведение
+        <strong class="blue">независимо</strong> от других частей
+    </p>
+</section>
+ <section>
+    <h2>Это инструмент</h2>
+    <ul>
+        <li>
+            такая же <strong class="blue">часть</strong> приложения, <br>как и рабочий код
+        </li>
+        <li>
+            применяется <strong class="green">командой</strong>, <br>а не отдельными разработчиками
+        </li>
+        <li>
+            <strong class="red">помогает</strong> решать проблемы
+        </li>
+        <li>
+            должен использоваться
+            <strong class="yellow">разумно</strong>
+        </li>
+    </ul>
+</section>
+ <section>
+    <h2>Хорошие юнит-тесты</h2>
+    <ul class="text-small">
+        <li class="fragment">
+            <strong class="yellow">Быстрые</strong> <br />В вашем приложении будут тысячи тестов. Тысячи, Карл.
+        </li>
+        <li class="fragment">
+            <strong class="blue">Изолированные</strong> <br />Без зависимостей и сайд-эффектов
+        </li>
+        <li class="fragment">
+            <strong class="red">Повторяемые</strong> <br />
+            Тест должен быть предсказуем. Результат не изменится, пока вы что-то не поменяете в коде.
+        </li>
+        <li class="fragment">
+            <strong class="green">Уместные</strong> <br />Тесты не должны писаться дольше основного кода
+        </li>
+    </ul>
+</section>
+ <section>
+    <h2>Тест должен быть <strong class="blue">юнитом</strong></h2>
+    <div class="images">
+        <div class="img-wrap">
+            <img
+                width="300"
+                src="../assets/images/unit-part.jpg"
+                alt="unit-part"
+            />
+            <svg
+                class="img-icon check"
+                width="60"
+                height="60"
+                viewBox="0 0 12 16"
+                version="1.1"
+                aria-hidden="true"
             >
-                <span>Ю</span>
-                <span>Н</span>
-                <span>И</span>
-                <span>Т</span>
-                <br />
-                <span>Т</span>
-                <span>Е</span>
-                <span>С</span>
-                <span>Т</span>
-                <span class="special">Ы</span>
-            </section>
-            <section>
-                <h2>Что такое юнит-тест</h2>
-                <p>
-                    Юнит-тест выделяет
-                    <strong class="yellow">небольшую часть</strong> приложения и проверяет ее поведение
-                    <strong class="blue">независимо</strong> от других частей
-                </p>
-            </section>
-            <section>
-                <h2>Это инструмент</h2>
-                <ul>
-                    <li>
-                        такая же <strong class="blue">часть</strong> приложения, <br>как и рабочий код
-                    </li>
-                    <li>
-                        применяется <strong class="green">командой</strong>, <br>а не отдельными разработчиками
-                    </li>
-                    <li>
-                        <strong class="red">помогает</strong> решать проблемы
-                    </li>
-                    <li>
-                        должен использоваться
-                        <strong class="yellow">разумно</strong>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Хорошие юнит-тесты</h2>
-                <ul class="text-small">
-                    <li class="fragment1">
-                        <strong class="yellow">Быстрые</strong> <br />В вашем приложении будут тысячи тестов. Тысячи, Карл.
-                    </li>
-                    <li class="fragment1">
-                        <strong class="blue">Изолированные</strong> <br />Без зависимостей и сайд-эффектов
-                    </li>
-                    <li class="fragment1">
-                        <strong class="red">Повторяемые</strong> <br />
-                        Тест должен быть предсказуем. Результат не изменится, пока вы что-то не поменяете в коде.
-                    </li>
-                    <li class="fragment1">
-                        <strong class="green">Уместные</strong> <br />Тесты не должны писаться дольше основного кода
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Тест должен быть <strong class="blue">юнитом</strong></h2>
-                <div class="images">
-                    <div class="img-wrap">
-                        <img
-                            width="300"
-                            src="../assets/images/unit-part.jpg"
-                            alt="unit-part"
-                        />
-                        <svg
-                            class="img-icon check"
-                            width="60"
-                            height="60"
-                            viewBox="0 0 12 16"
-                            version="1.1"
-                            aria-hidden="true"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"
-                            ></path>
-                        </svg>
-                    </div>
-                    <div class="img-wrap">
-                        <img
-                            width="300"
-                            src="../assets/images/unit-whole.gif"
-                            alt="unit-whole"
-                        />
-                        <svg
-                            class="img-icon circle-slash"
-                            width="60"
-                            height="60"
-                            viewBox="0 0 14 16"
-                            version="1.1"
-                            aria-hidden="true"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                d="M7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 1.3c1.3 0 2.5.44 3.47 1.17l-8 8A5.755 5.755 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zm0 11.41c-1.3 0-2.5-.44-3.47-1.17l8-8c.73.97 1.17 2.17 1.17 3.47 0 3.14-2.56 5.7-5.7 5.7z"
-                            ></path>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h2><strong class="yellow">Пирамида</strong> тестирования</h2>
-                <img
-                    width="500"
-                    src="../assets/images/typical_pyramid.jpg"
-                    alt="typical pyramid"
-                />
-            </section>
-            <section>
-                <h2><strong class="green">радуги</strong> и <strong class="red">единороги</strong></h2>
-                <div class="text text-left">
-                    <p>
-                        В вашем приложении божественная архитектура.
-                        <br>
-                        Код состоит из <strong class="yellow">слабо связанных модулей</strong>,
-                        разнесенных на <strong class="blue">независимые слои</strong> абстракций.
-                    </p>
-                    <p>
-                        Используйте юнит-тесты для тестирования отдельных частей системы и их взаимосвязей друг с другом.
-                    </p>
-                </div>
-            </section>
-            <section>
-                <h2 class="title-small">что-то&nbsp;<strong class="green">классно</strong>, что-то <strong class="red">не очень</strong></h2>
-            
-                <div class="text text-left">
-                    <p>
-                        В целом все хорошо, хоть и не без багов и легаси.
-                    </p>
-                    <p>
-                        Наибольшая проблема — <strong class="blue">уменьшение зависимостей</strong>
-                        между различными частями системы.
-                    </p>
-                    <p>
-                        Тестирование обычно добавляется при <strong class="yellow">рефакторинге</strong> больших блоков.
-                    </p>
-                    <p>
-                        Сперва добавьте более <strong class="red">высокоуровневые тесты</strong>. Затем
-                        <strong class="green">выделите слабо связанные части</strong> и покройте их юнитами.
-                    </p>
-                </div>
-            </section>
-            <section>
-                <h2>без <strong class="red">слез</strong> не взглянешь</h2>
-                <div class="text text-left">
-                    <p>
-                        Писать тесты невероятно сложно.<br>Приложение ведет себя непредсказуемо.
-                    </p>
-                    <p>
-                        <strong class="green">Создайте высокоуровневые тесты</strong>, потом&nbsp;перепишите весь код. <br>Как вариант, используя TDD.
-                    </p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Code style</h2>
-                <p><a href="https://github.com/aalexeev239/units-talk/tree/master/examples-ru/" target="_blank">
-                    примеры кода тут
-                </a></p>
-            </section>
-
-            <section>
-                <h2>AAA. Arrange, Act, Assert</h2>
-                <ul>
-                    <li>
-                        <strong class="red">Arrange</strong> подготовьте объекты, создав и установив все&nbsp;необходимое
-                    </li>
-                    <li><strong class="blue">Act</strong> произведите действие</li>
-                    <li><strong class="green">Assert</strong> проверьте результат</li>
-                </ul>
-            </section>
-            <section>
-                <h2>AAA. Плюсы</h2>
-                <ul>
-                    <li>отделяем <strong class="red">подготовку теста</strong> от <strong class="green">проверки</strong></li>
-                    <li>явно показываем,  <strong class="yellow">что тестируется</strong></li>
-                    <li>тест легко читать</li>
-                    <li>увеличиваем <strong class="blue">DRY</strong></li>
-                </ul>
-            </section>
-
-
-            <section>
-                <h2>Именование важно</h2>
-                <ul>
-                    <li>тесты могут быть <strong class="blue">документацией</strong></li>
-                    <li>упавшие тесты описывают, <strong class="red">что сломалось</strong></li>
-                    <li>улучшается <strong class="yellow">именование кода</strong></li>
-                </ul>
-            </section>
-            <section>
-                <h2>как именовать</h2>
-                <ul>
-                    <li>покажите, какой <strong class="blue">класс/метод</strong> тестируются</li>
-                    <li>
-                        используйте <strong class="green">describe</strong> для создания структуры тестов
-                    </li>
-                    <li>используйте <strong class="red">it</strong> для описания поведения</li>
-                </ul>
-            </section>
-            <section>
-                <h2 class="title-small"><strong class="red">Минимально</strong> необходимые&nbsp;тесты</h2>
-                <ul>
-                    <li>тесты устойчивы к изменениям кода</li>
-                    <li>приближаются к тестированию поведения, а не реализации</li>
-                    <li>без <strong class="yellow">магических</strong> значений</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Одна проверка – один тест</h2>
-                <ul>
-                    <li><strong class="yellow">явно показывается</strong>, что упало</li>
-                    <li>точно знаем, что в одном тесте не проверяется несколько кейсов</li>
-                    <li>(при этом допускается несколько проверок для одного объекта)</li>
-                </ul>
-            </section>
-            <section>
-                <h2 class="title-small">Не тестируйте <strong class="red">приватные</strong>&nbsp;методы</h2>
-                <ul>
-                    <li><em>тестируйте поведение, а не реализацию™</em></li>
-                    <li>приватные методы никогда не используются отдельно</li>
-                    <li>это часто индикатор <strong class="blue">запашка от кода</strong> 💩</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Избегайте логики в тестах</h2>
-                <ul>
-                    <li>уберите циклы и условия — <strong class="green">тест&nbsp;должен&nbsp;быть&nbsp;простым</strong></li>
-                    <li>меньше шансов допустить ошибку в самих тестах</li>
-                    <li>и еще раз, <strong class="blue">фокусируйтесь на результате</strong>, не проверяйте реализацию</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Не используйте константы в тестах</h2>
-                <ul>
-                    <li>мое любимое <strong class="yellow"><em>тестируйте&nbsp;поведение,&nbsp;а&nbsp;не&nbsp;реализацию™</em></strong></li>
-                </ul>
-            </section>
-            <section>
-                <h2>Советы по архитектуре</h2>
-                <p><em>продолжение следует...</em></p>
-                <img src="../assets/images/unit-test-passed.jpg" alt="unit-test-passed">
-            </section>
-            <section>
-                <h2>Материалы</h2>
-                <div class="text text-left">
-                    <ul>
-                        <li><a target="_blank" href="https://docs.microsoft.com/ru-ru/dotnet/core/testing/unit-testing-best-practices">Unit testing best practices with .NET Core and .NET Standard</a></li>
-                        <li><a target="_blank" href="https://github.com/CareMessagePlatform/jasmine-styleguide">Jasmine Style Guide</a></li>
-                        <li><a target="_blank" href="https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters">Unit Tests, How to Write Testable Code and Why it Matters</a></li>
-                        <li><a target="_blank" href="https://dzone.com/articles/unit-testing-the-good-bad-amp-ugly">Unit Testing: The Good, Bad, and Ugly</a></li>
-                        <li><a target="_blank" href="https://techbeacon.com/app-dev-testing/no-1-unit-testing-best-practice-stop-doing-it">The No. 1 unit testing best practice: Stop doing it</a></li>
-                        <li><a target="_blank" href="https://www.hbo.com/westworld">[HBO] Westworld</a></li>
-                    </ul>
-                </div>
-            </section>
+                <path
+                    fill-rule="evenodd"
+                    d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"
+                ></path>
+            </svg>
+        </div>
+        <div class="img-wrap">
+            <img
+                width="300"
+                src="../assets/images/unit-whole.gif"
+                alt="unit-whole"
+            />
+            <svg
+                class="img-icon circle-slash"
+                width="60"
+                height="60"
+                viewBox="0 0 14 16"
+                version="1.1"
+                aria-hidden="true"
+            >
+                <path
+                    fill-rule="evenodd"
+                    d="M7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 1.3c1.3 0 2.5.44 3.47 1.17l-8 8A5.755 5.755 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zm0 11.41c-1.3 0-2.5-.44-3.47-1.17l8-8c.73.97 1.17 2.17 1.17 3.47 0 3.14-2.56 5.7-5.7 5.7z"
+                ></path>
+            </svg>
         </div>
     </div>
+</section>
+ <section>
+    <h2><strong class="yellow">Пирамида</strong> тестирования</h2>
+    <img
+        width="500"
+        src="../assets/images/typical_pyramid.jpg"
+        alt="typical pyramid"
+    />
+</section>
+ <section>
+    <h2><strong class="green">радуги</strong> и <strong class="red">единороги</strong></h2>
+    <div class="text text-left">
+        <p>
+            В вашем приложении божественная архитектура.
+            <br>
+            Код состоит из <strong class="yellow">слабо связанных модулей</strong>,
+            разнесенных на <strong class="blue">независимые слои</strong> абстракций.
+        </p>
+        <p>
+            Используйте юнит-тесты для тестирования отдельных частей системы и их взаимосвязей друг с другом.
+        </p>
+    </div>
+</section>
+ <section>
+    <h2 class="title-small">что-то&nbsp;<strong class="green">классно</strong>, что-то <strong class="red">не очень</strong></h2>
 
-    <script src="../assets/js/reveal.js"></script>
-    <script>
-        // More info about config & dependencies:
-        // - https://github.com/hakimel/reveal.js#configuration
-        // - https://github.com/hakimel/reveal.js#dependencies
-        Reveal.initialize({
-            showNotes:
-                document.location.search.indexOf("showNotes=true") >= 0,
-            history: true,
-            dependencies: [
-                { src: "../assets/plugin/markdown/marked.js" },
-                { src: "../assets/plugin/markdown/markdown.js" },
-                { src: "../assets/plugin/notes/notes.js", async: true },
-                { src: "../assets/plugin/highlight/highlight.js", async: true }
-            ]
-        });
-    </script>
+    <div class="text text-left">
+        <p>
+            В целом все хорошо, хоть и не без багов и легаси.
+        </p>
+        <p>
+            Наибольшая проблема — <strong class="blue">уменьшение зависимостей</strong>
+            между различными частями системы.
+        </p>
+        <p>
+            Тестирование обычно добавляется при <strong class="yellow">рефакторинге</strong> больших блоков.
+        </p>
+        <p>
+            Сперва добавьте более <strong class="red">высокоуровневые тесты</strong>. Затем
+            <strong class="green">выделите слабо связанные части</strong> и покройте их юнитами.
+        </p>
+    </div>
+</section>
+ <section>
+    <h2>без <strong class="red">слез</strong> не взглянешь</h2>
+    <div class="text text-left">
+        <p>
+            Писать тесты невероятно сложно.<br>Приложение ведет себя непредсказуемо.
+        </p>
+        <p>
+            <strong class="green">Создайте высокоуровневые тесты</strong>, потом&nbsp;перепишите весь код. <br>Как вариант, используя TDD.
+        </p>
+    </div>
+</section>
+
+
+                <section>
+                    <h2>Code style</h2>
+                    <p>
+                        <a
+                            href="https://github.com/aalexeev239/units-talk/tree/master/examples-ru/"
+                            target="_blank"
+                        >
+                             примеры кода тут 
+                        </a>
+                    </p>
+                </section>
+
+                <section>
+    <h2>AAA. Arrange, Act, Assert</h2>
+    <ul>
+        <li>
+            <strong class="red">Arrange</strong> подготовьте объекты, создав и установив все&nbsp;необходимое
+        </li>
+        <li><strong class="blue">Act</strong> произведите действие</li>
+        <li><strong class="green">Assert</strong> проверьте результат</li>
+    </ul>
+</section>
+ <section>
+    <h2>AAA. Плюсы</h2>
+    <ul>
+        <li>отделяем <strong class="red">подготовку теста</strong> от <strong class="green">проверки</strong></li>
+        <li>явно показываем,  <strong class="yellow">что тестируется</strong></li>
+        <li>тест легко читать</li>
+        <li>увеличиваем <strong class="blue">DRY</strong></li>
+    </ul>
+</section>
+  <section>
+    <h2>Именование важно</h2>
+    <ul>
+        <li>тесты могут быть <strong class="blue">документацией</strong></li>
+        <li>упавшие тесты описывают, <strong class="red">что сломалось</strong></li>
+        <li>улучшается <strong class="yellow">именование кода</strong></li>
+    </ul>
+</section>
+
+                <section>
+    <h2>как именовать</h2>
+    <ul>
+        <li>покажите, какой <strong class="blue">класс/метод</strong> тестируются</li>
+        <li>
+            используйте <strong class="green">describe</strong> для создания структуры тестов
+        </li>
+        <li>используйте <strong class="red">it</strong> для описания поведения</li>
+    </ul>
+</section>
+ <section>
+    <h2 class="title-small"><strong class="red">Минимально</strong> необходимые&nbsp;тесты</h2>
+    <ul>
+        <li>тесты устойчивы к изменениям кода</li>
+        <li>приближаются к тестированию поведения, а не реализации</li>
+        <li>без <strong class="yellow">магических</strong> значений</li>
+    </ul>
+</section>
+ <section>
+    <h2>Одна проверка – один тест</h2>
+    <ul>
+        <li><strong class="yellow">явно показывается</strong>, что упало</li>
+        <li>точно знаем, что в одном тесте не проверяется несколько кейсов</li>
+        <li>(при этом допускается несколько проверок для одного объекта)</li>
+    </ul>
+</section>
+ <section>
+    <h2 class="title-small">Не тестируйте <strong class="red">приватные</strong>&nbsp;методы</h2>
+    <ul>
+        <li><em>тестируйте поведение, а не реализацию™</em></li>
+        <li>приватные методы никогда не используются отдельно</li>
+        <li>это часто индикатор <strong class="blue">запашка от кода</strong> 💩</li>
+    </ul>
+</section>
+ <section>
+    <h2>Избегайте логики в тестах</h2>
+    <ul>
+        <li>уберите циклы и условия — <strong class="green">тест&nbsp;должен&nbsp;быть&nbsp;простым</strong></li>
+        <li>меньше шансов допустить ошибку в самих тестах</li>
+        <li>и еще раз, <strong class="blue">фокусируйтесь на результате</strong>, не проверяйте реализацию</li>
+    </ul>
+</section>
+
+                <section>
+    <h2>Не используйте константы в тестах</h2>
+    <ul>
+        <li>мое любимое <strong class="yellow"><em>тестируйте&nbsp;поведение,&nbsp;а&nbsp;не&nbsp;реализацию™</em></strong></li>
+    </ul>
+</section>
+ <section>
+    <h2>Советы по архитектуре</h2>
+    <p><em>продолжение следует...</em></p>
+    <img src="../assets/images/unit-test-passed.jpg" alt="unit-test-passed">
+</section>
+ <section>
+    <h2>Материалы</h2>
+    <div class="text text-left">
+        <ul>
+            <li><a target="_blank" href="https://docs.microsoft.com/ru-ru/dotnet/core/testing/unit-testing-best-practices">Unit testing best practices with .NET Core and .NET Standard</a></li>
+            <li><a target="_blank" href="https://github.com/CareMessagePlatform/jasmine-styleguide">Jasmine Style Guide</a></li>
+            <li><a target="_blank" href="https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters">Unit Tests, How to Write Testable Code and Why it Matters</a></li>
+            <li><a target="_blank" href="https://dzone.com/articles/unit-testing-the-good-bad-amp-ugly">Unit Testing: The Good, Bad, and Ugly</a></li>
+            <li><a target="_blank" href="https://techbeacon.com/app-dev-testing/no-1-unit-testing-best-practice-stop-doing-it">The No. 1 unit testing best practice: Stop doing it</a></li>
+            <li><a target="_blank" href="https://www.hbo.com/westworld">[HBO] Westworld</a></li>
+        </ul>
+    </div>
+</section>
+
+            </div>
+        </div>
+
+        <script src="../assets/js/reveal.js"></script>
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                showNotes:
+                    document.location.search.indexOf("showNotes=true") >= 0,
+                history: true,
+                dependencies: [
+                    { src: "../assets/plugin/markdown/marked.js" },
+                    { src: "../assets/plugin/markdown/markdown.js" },
+                    { src: "../assets/plugin/notes/notes.js", async: true },
+                    {
+                        src: "../assets/plugin/highlight/highlight.js",
+                        async: true
+                    }
+                ]
+            });
+
+            function addFlag() {
+                var wrapper = document.querySelector("#flags");
+
+                if (!wrapper) {
+                    return;
+                }
+
+                var currentLocale = wrapper.dataset.locale;
+                var flags = Array.prototype.slice.call(
+                    wrapper.querySelectorAll("a"),
+                    0
+                );
+
+                flags.forEach(function(flag) {
+                    flag.addEventListener("click", onFlagClick);
+
+                    if (flag.dataset.flag === currentLocale) {
+                        flag.classList.add('active')
+                    }
+                });
+
+                function onFlagClick(event) {
+                    event.preventDefault();
+                    var target = event.currentTarget;
+                    var targetLocale = target.dataset.flag;
+
+                    if (targetLocale === currentLocale) {
+                        return;
+                    }
+
+                    var newPathName = location.pathname.replace(
+                        currentLocale,
+                        targetLocale
+                    );
+                    var newUrl = location.origin + newPathName + location.hash;
+
+                    location.replace(newUrl);
+                }
+
+                wrapper.classList.remove("hidden");
+            }
+
+            addFlag();
+        </script>
     </body>
 </html>
