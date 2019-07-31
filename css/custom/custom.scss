@@ -160,3 +160,40 @@ strong {
         text-align: left;
     }
 }
+
+.flags {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+
+    &.hidden {
+        display: none;
+    }
+
+    a {
+        margin: 0 4px;
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        line-height: 0;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        &.active {
+            box-shadow: 0 0 0 2px $color-blue;
+            cursor: default;
+
+            &:hover,
+            &:focus {
+                opacity: 0.7;
+            }
+        }
+    }
+}
