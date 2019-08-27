@@ -1,5 +1,6 @@
 {
     "meta": {
-        "title": "Unit testing"
+        "title": "Unit testing",
+        "description": "Advices for writing tests"
     }
 }
